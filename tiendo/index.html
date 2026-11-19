@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="ht_icon.png">
+<meta property="og:title" content="HouseTech · Tiến độ thi công mẫu">
+<meta property="og:description" content="HouseTech · Tổng thầu thiết kế, xây dựng &amp; nội thất · Caraworld Cam Ranh">
+<meta property="og:image" content="https://dangdilam.github.io/HT--sale-2/HT_anh_xem_truoc_link.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dangdilam.github.io/HT--sale-2/tiendo/">
+<title>HT- SALE · Tiến độ thi công mẫu</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* HouseTech: navy, kem, vàng đồng. Bố cục: bảng công tác bên trái, biểu đồ Gantt theo tuần bên phải, nghỉ Tết tô sọc */
+  --navy:#17253b; --cream:#f6f1e7; --paper:#fffdf8; --gold:#b48a4f; --line:#e3dacb; --muted:#6c6a66; --ink:#1d1f24; --bar:#5d7189;
+  --f:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif; color-scheme:light;
+}
+*{box-sizing:border-box} html,body{margin:0}
+body{background:var(--cream);color:var(--ink);font-family:var(--f);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.top{background:var(--navy);color:#fff}
+.top .in{max-width:1280px;margin:0 auto;padding:22px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.top img{height:46px}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#cdb38a}
+h1{margin:2px 0 0;font-weight:300;font-size:26px;letter-spacing:.06em;text-transform:uppercase}
+main{max-width:1280px;margin:0 auto;padding:20px 20px 60px;display:flex;flex-direction:column;gap:18px}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:760px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.kpi{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px}
+.kpi b{display:block;font-size:22px;color:var(--navy);font-weight:600;font-variant-numeric:tabular-nums}
+.kpi span{font-size:12px;color:var(--muted);letter-spacing:.04em}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow-x:auto}
+.g{display:grid;grid-template-columns:minmax(260px,330px) 58px 1fr;min-width:1040px}
+.h{position:sticky;top:0;background:var(--paper);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:10px 12px;border-bottom:1px solid var(--line)}
+.c{padding:7px 12px;border-bottom:1px solid #efe8dc;display:flex;align-items:center;min-height:36px}
+.c.grp{font-weight:600;color:var(--navy);background:#faf6ee}
+.c.sum{font-weight:700;color:#fff;background:var(--navy)}
+.c.d{justify-content:flex-end;font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px}
+.tl{position:relative;padding:0}
+.mon{display:flex;height:100%}
+.mon div{border-left:1px solid var(--line);padding:10px 6px;font-size:11px;letter-spacing:.1em;color:var(--muted);font-weight:600;white-space:nowrap;overflow:hidden}
+.b{position:absolute;top:10px;height:16px;border-radius:3px;background:var(--bar)}
+.b.grp{background:var(--gold);height:10px;top:13px}
+.b.sum{background:#cdb38a;height:10px;top:13px}
+.b.ms{width:14px!important;height:14px;top:11px;background:var(--navy);transform:rotate(45deg);border-radius:2px}
+.tet{position:absolute;top:0;bottom:0;background:repeating-linear-gradient(135deg,rgba(180,138,79,.12) 0 6px,rgba(180,138,79,.04) 6px 12px);border-left:1px dashed var(--gold);border-right:1px dashed var(--gold);pointer-events:none}
+.wk{position:absolute;top:0;bottom:0;border-left:1px solid #f1ebe0}
+.lab{position:absolute;top:9px;font-size:11.5px;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.leg{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+.leg i{display:inline-block;width:14px;height:10px;border-radius:2px;vertical-align:middle;margin-right:6px}
+.notes{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 20px;font-size:13.5px}
+.notes h2{margin:0 0 6px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--navy)}
+.notes ul{margin:0;padding-left:18px}
+footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:var(--muted);font-size:12px}
+
+.htnav{position:sticky;top:0;z-index:50;background:#0f1a2b;color:#fff;font-family:'Be Vietnam Pro',system-ui,sans-serif}
+.htnav .in{max-width:1280px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;gap:10px;min-height:44px}
+.htnav a.hb,.htnav button{font:inherit;font-size:13px;color:#fff;background:transparent;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;line-height:1}
+.htnav a.hb:hover,.htnav button:hover{border-color:#cdb38a;color:#e8d6b6}
+.htnav a.hb:focus-visible,.htnav button:focus-visible{outline:2px solid #cdb38a;outline-offset:2px}
+.htnav .sp{flex:1}.htnav button.mon{border-color:#cdb38a;color:#e8d6b6}@media(max-width:520px){.htnav #htMusic span{display:none}.htnav .in{gap:6px;padding:8px 12px}}@media(max-width:430px){.htnav .brand{display:none}}
+.htnav .brand{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#cdb38a}
+.htnav .lang{display:inline-flex;border:1px solid rgba(255,255,255,.25);border-radius:999px;overflow:hidden}
+.htnav .lang button{border:0;border-radius:0;padding:6px 11px}
+.htnav .lang button.on{background:#b48a4f;color:#0f1a2b;font-weight:600}
+.htnav svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.htdrawer{position:fixed;inset:0;z-index:60;display:none}
+.htdrawer.open{display:block}
+.htdrawer .bg{position:absolute;inset:0;background:rgba(15,26,43,.45)}
+.htdrawer .pn{position:absolute;top:0;right:0;height:100%;width:min(360px,88vw);background:#fffdf8;box-shadow:-8px 0 30px rgba(0,0,0,.18);padding:20px;display:flex;flex-direction:column;gap:6px;overflow:auto;font-family:'Be Vietnam Pro',system-ui,sans-serif}
+.htdrawer .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.htdrawer .hd b{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#17253b}
+.htdrawer .hd button{font:inherit;border:1px solid #e3dacb;background:#fff;border-radius:999px;padding:5px 12px;cursor:pointer;color:#17253b}
+.htdrawer a{display:block;padding:11px 12px;border-radius:6px;color:#17253b;text-decoration:none;font-size:14.5px;border:1px solid transparent}
+.htdrawer a:hover{background:#f6f1e7;border-color:#e3dacb}
+.htdrawer a.cur{background:#17253b;color:#fff}
+.htdrawer a.home{font-weight:600;border-color:#e3dacb;margin-bottom:6px}
+.htdrawer .ft{margin-top:auto;font-size:12px;color:#6c6a66;padding-top:12px}
+</style></head><body>
+<nav class="htnav" aria-label="HT- SALE"><div class="in"><a class="hb" id="htHome" href="../"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span data-en="HT- SALE home">Trang chính</span></a><span class="brand">HouseTech · HT- SALE</span><span class="sp"></span><button id="htMusic" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span>Nhạc nền</span></button>
+<button id="htMenuBtn" aria-haspopup="dialog" aria-controls="htDrawer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span data-en="Menu">Menu</span></button>
+<div class="lang" role="group" aria-label="Ngôn ngữ / Language"><button data-l="vi">VI</button><button data-l="en">EN</button></div>
+</div></nav>
+<div class="htdrawer" id="htDrawer" role="dialog" aria-modal="true" aria-label="Menu"><div class="bg" data-close></div><div class="pn">
+<div class="hd"><b data-en="All pages">Tất cả trang</b><button data-close data-en="Close">Đóng</button></div>
+<div id="htLinks"></div><div class="ft" data-en="Pages marked ↗ open in the slide, doc or whiteboard editor.">Trang có dấu ↗ mở trong trình xem slide, tài liệu hoặc whiteboard.</div></div></div>
+<header class="top"><div class="in">
+<img src="data:image/png;base64,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" alt="HouseTech">
+<div><div class="eyebrow" data-en="HT- SALE · Sample schedule appendix">HT- SALE · Phụ lục tiến độ mẫu</div><h1 data-en="Construction schedule · Package A1">Tiến độ thi công · Gói A1</h1></div>
+</div></header>
+<main>
+<div class="kpis">
+ <div class="kpi"><b>70</b><span data-en="working days under the contract">ngày làm việc theo hợp đồng</span></div>
+ <div class="kpi"><b>20/11/2026</b><span data-en="planned start">khởi công dự kiến</span></div>
+ <div class="kpi"><b>04/03/2027</b><span data-en="planned handover">nghiệm thu bàn giao dự kiến</span></div>
+ <div class="kpi"><b data-en="20 days">20 ngày</b><span data-en="Tết break 01/02 – 20/02/2027, not counted">nghỉ Tết 01/02 – 20/02/2027, không tính</span></div>
+</div>
+<div class="leg"><span><i style="background:#cdb38a"></i><span data-en="Overall">Tổng thể</span></span><span><i style="background:var(--gold)"></i><span data-en="Work group">Nhóm hạng mục</span></span><span><i style="background:var(--bar)"></i><span data-en="Task">Công tác</span></span><span><i style="background:var(--navy);transform:rotate(45deg);width:10px"></i><span data-en="Handover">Nghiệm thu</span></span><span><i style="background:repeating-linear-gradient(135deg,rgba(180,138,79,.4) 0 3px,transparent 3px 6px);border:1px dashed var(--gold)"></i><span data-en="Tết break">Nghỉ Tết</span></span></div>
+<div class="card"><div class="g" id="g"></div></div>
+<div class="notes">
+ <h2 data-en="How to read the schedule">Cách đọc tiến độ</h2>
+ <ul>
+  <li data-en="Time runs from the later of site handover and receipt of the full first advance.">Thời gian tính từ ngày muộn hơn giữa ngày nhận bàn giao mặt bằng và ngày nhận đủ tạm ứng đợt 1.</li>
+  <li data-en="Sundays, public holidays, days the estate management bans work, and time waiting for sample approval or variations are not counted.">Không tính Chủ nhật, ngày lễ Tết, ngày Ban quản lý dự án không cho thi công, thời gian chờ duyệt mẫu hoặc xử lý phát sinh.</li>
+  <li data-en="Concealed M&amp;E, waterproofing and AC piping are inspected before covering, tied to payment 2.">Điện nước âm, chống thấm và ống điều hòa được nghiệm thu trước khi che khuất, gắn với đợt thanh toán 2.</li>
+  <li data-en="Weekly photo progress reports in the project Zalo group.">Báo cáo tiến độ hằng tuần bằng hình ảnh qua nhóm Zalo công trình.</li>
+ </ul>
+</div>
+</main>
+<footer data-en="Sample schedule for a 3-storey townhouse of about 209 m², Package A1. Actual schedules follow the approved design. HOUSETECH CO., LTD">Mẫu tiến độ áp dụng cho căn nhà phố 3 tầng ~209 m², Gói A1. Tiến độ thực tế lập riêng theo hồ sơ thiết kế được duyệt. CÔNG TY TNHH HOUSETECH</footer>
+<script>
+(function(){
+var P=[{"id": "home", "url": "../", "vi": "Trang chính HT- SALE", "en": "HT- SALE home", "web": true}, {"id": "goi", "url": "../goi/", "vi": "01 · Chọn gói đầu tư & tự ra giá", "en": "01 · Package picker & pricing", "web": true}, {"id": "slides", "url": "../thietke/", "vi": "02 · Thiết kế mẫu (slide)", "en": "02 · Sample design (slides)", "web": true}, {"id": "vatlieu", "url": "../vatlieu/", "vi": "03 · Vật liệu & thiết bị mẫu", "en": "03 · Sample materials & fittings", "web": true}, {"id": "dutoan", "url": "../dutoan/", "vi": "04 · Dự toán kinh phí đầu tư", "en": "04 · Investment cost estimate", "web": true}, {"id": "hopdong", "url": "../hopdong/", "vi": "05 · Hợp đồng thi công mẫu", "en": "05 · Sample construction contract", "web": true}, {"id": "tiendo", "url": "../tiendo/", "vi": "06 · Tiến độ thi công mẫu", "en": "06 · Sample construction schedule", "web": true}, {"id": "wb", "url": "../quytrinh/", "vi": "07 · Quy trình bán hàng & các gói", "en": "07 · Sales process & packages", "web": true}, {"id": "care", "url": "../care/", "vi": "08 · HouseTech Care", "en": "08 · HouseTech Care", "web": true}, {"id": "lienhe", "url": "../lienhe/", "vi": "09 · Liên hệ", "en": "09 · Contact", "web": true}], CUR="tiendo";
+var L='vi'; try{ if(location.hash==='#en') L='en'; else { var s=localStorage.getItem('ht_lang'); if(s==='en'&&!location.hash) L='en'; } }catch(e){}
+window.HT_LANG=L; window.HT_ON=[];
+window.T=function(vi,en){return window.HT_LANG==='en'?en:vi;};
+var orig=new WeakMap();
+function apply(){
+  document.documentElement.lang=window.HT_LANG;
+  document.querySelectorAll('[data-en]').forEach(function(el){
+    if(!orig.has(el)) orig.set(el, el.tagName==='INPUT'?el.placeholder:el.innerHTML);
+    var v=window.HT_LANG==='en'?el.getAttribute('data-en'):orig.get(el);
+    if(el.tagName==='INPUT') el.placeholder=v; else el.innerHTML=v;
+  });
+  document.querySelectorAll('.htnav .lang button').forEach(function(b){b.classList.toggle('on',b.dataset.l===window.HT_LANG);b.setAttribute('aria-pressed',b.dataset.l===window.HT_LANG);});
+  var box=document.getElementById('htLinks');
+  box.innerHTML=P.map(function(p,i){var u=p.url+(p.web&&window.HT_LANG==='en'?'#en':'');return '<a href="'+u+'" class="'+(i===0?'home ':'')+(p.id===CUR?'cur':'')+'"'+(p.id===CUR?' aria-current="page"':'')+'>'+(window.HT_LANG==='en'?p.en:p.vi)+(p.web?'':' ↗')+'</a>';}).join('');
+  var h=document.getElementById('htHome'); if(h) h.href=P[0].url+(window.HT_LANG==='en'?'#en':'');
+  document.querySelectorAll('a[data-web]').forEach(function(a){var b=a.getAttribute('href').split('#')[0];a.setAttribute('href',b+(window.HT_LANG==='en'?'#en':''));});
+  window.HT_ON.forEach(function(f){try{f();}catch(e){}});
+}
+window.HT_apply=apply;
+document.querySelectorAll('.htnav .lang button').forEach(function(b){b.addEventListener('click',function(){window.HT_LANG=b.dataset.l;try{localStorage.setItem('ht_lang',window.HT_LANG);history.replaceState(null,'',window.HT_LANG==='en'?'#en':location.pathname+location.search);}catch(e){}apply();});});
+var d=document.getElementById('htDrawer'), mb=document.getElementById('htMenuBtn');
+function close(){d.classList.remove('open');mb.focus();}
+mb.addEventListener('click',function(){d.classList.add('open');var a=d.querySelector('a');if(a)a.focus();});
+d.querySelectorAll('[data-close]').forEach(function(x){x.addEventListener('click',close);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.classList.contains('open'))close();});
+window.addEventListener('hashchange',function(){var n=location.hash==='#en'?'en':'vi';if(n!==window.HT_LANG){window.HT_LANG=n;apply();}});
+document.addEventListener('DOMContentLoaded',apply); if(document.readyState!=='loading') apply();
+})();
+</script>
+<script>
+const TK=[
+ ['sum',['TIẾN ĐỘ TỔNG THỂ GÓI A1','OVERALL SCHEDULE, PACKAGE A1'],'2026-11-20','2027-03-04',71],
+ ['grp',['I. Chi phí chung','I. General costs'],'2026-11-20','2027-03-03',70],
+ ['',['Bao che công trình, chuẩn bị mặt bằng, nhân công, vật tư','Site hoarding, preparation, labour, materials'],'2026-11-20','2026-11-23',3],
+ ['',['Vệ sinh và vận chuyển rác thải (thường xuyên)','Cleaning and waste removal (ongoing)'],'2026-11-24','2027-03-03',67],
+ ['grp',['II. Chống thấm ngoại thất và ô thang máy','II. Exterior waterproofing and lift shaft'],'2026-11-24','2026-12-29',31],
+ ['',['Xây hoàn thiện ô thang máy (hố bít, dầm giằng, mái, tường bao)','Build lift shaft (pit, tie beams, roof, enclosure)'],'2026-11-24','2026-12-09',14],
+ ['',['Chống thấm mái, mặt tiền, ban công','Waterproof roof, façades, balconies'],'2026-12-10','2026-12-19',9],
+ ['',['Lát gạch sàn mái, xử lý thấm dột mái đón và mặt tiền','Tile roof deck, fix leaks at canopy and façades'],'2026-12-21','2026-12-29',8],
+ ['grp',['III. Phần thô hoàn thiện nội thất','III. Interior shell and finishing'],'2026-11-24','2027-03-01',65],
+ ['',['Xây hoàn thiện tường nội thất','Build interior walls'],'2026-11-24','2026-12-09',14],
+ ['',['Thi công hệ thống điện, nước âm','Concealed electrical and plumbing'],'2026-11-30','2026-12-12',12],
+ ['',['Trát tường hoàn thiện nội thất','Plaster interior walls'],'2026-12-08','2026-12-24',15],
+ ['',['Thi công trần thạch cao','Gypsum ceilings'],'2026-12-14','2026-12-24',10],
+ ['',['Chống thấm nền vệ sinh','Waterproof bathroom floors'],'2026-12-16','2026-12-21',5],
+ ['',['Cán nền toàn công trình','Screed all floors'],'2026-12-22','2026-12-30',8],
+ ['',['Bả bột trét nội thất','Interior skim coat'],'2026-12-25','2027-01-08',12],
+ ['',['Ốp, lát gạch tường, nền','Wall and floor tiling'],'2026-12-31','2027-01-21',18],
+ ['',['Sơn nước hoàn thiện tường, trần','Paint walls and ceilings'],'2027-01-19','2027-02-22',12],
+ ['',['Ốp đá cầu thang, ngạch cửa','Stone stairs and door thresholds'],'2027-01-22','2027-01-30',8],
+ ['',['Lắp đặt cửa đi, cửa sổ, vách kính','Install doors, windows, glass partitions'],'2027-01-28','2027-02-26',8],
+ ['',['Lắp đặt lan can cầu thang','Install stair railing'],'2027-02-22','2027-02-26',5],
+ ['',['Dặm vá hoàn thiện sơn nước','Paint touch-ups'],'2027-02-26','2027-03-01',3],
+ ['grp',['IV. Hệ thống ống điều hòa không khí','IV. Air-conditioning piping'],'2026-12-02','2026-12-12',10],
+ ['',['Thi công ống điều hòa (trước khi che khuất)','Install AC piping (before covering)'],'2026-12-02','2026-12-12',10],
+ ['',['Vệ sinh công nghiệp nội thất','Professional interior clean'],'2027-03-02','2027-03-03',2],
+ ['ms',['Nghiệm thu bàn giao công trình Gói A1','Handover inspection, Package A1'],'2027-03-04','2027-03-04',1]
+];
+const S=new Date('2026-11-16'),E=new Date('2027-03-08'),span=(E-S)/864e5;
+const pct=d=>((new Date(d)-S)/864e5/span*100);
+const fmt=d=>{const x=new Date(d);return String(x.getDate()).padStart(2,'0')+'/'+String(x.getMonth()+1).padStart(2,'0')};
+const months=()=>[[T('T11/2026','Nov 2026'),'2026-11-16','2026-12-01'],[T('T12/2026','Dec 2026'),'2026-12-01','2027-01-01'],[T('T01/2027','Jan 2027'),'2027-01-01','2027-02-01'],[T('T02/2027','Feb 2027'),'2027-02-01','2027-03-01'],[T('T03','Mar'),'2027-03-01','2027-03-08']];
+let wk='';for(let d=new Date(S);d<E;d.setDate(d.getDate()+7))wk+=`<div class="wk" style="left:${pct(d)}%"></div>`;
+const tet=`<div class="tet" style="left:${pct('2027-02-01')}%;width:${pct('2027-02-21')-pct('2027-02-01')}%"></div>`;
+function draw(){let h=`<div class="h">${T('Công tác','Task')}</div><div class="h" style="text-align:right">${T('Ngày','Days')}</div><div class="h tl"><div class="mon">${months().map(([l,a,b])=>`<div style="width:${pct(b)-pct(a)}%">${l}</div>`).join('')}</div></div>`;
+TK.forEach(([k,nn,a,b,d])=>{const n=T(nn[0],nn[1]);
+ const l=pct(a),w=Math.max(pct(new Date(new Date(b).getTime()+864e5))-l,.6);
+ const bar=k==='ms'?`<div class="b ms" style="left:calc(${l}% - 4px)"></div><div class="lab" style="right:calc(${100-l}% + 10px)">${fmt(b)}</div>`:`<div class="b ${k}" style="left:${l}%;width:${w}%"></div>${w>25?`<div class="lab" style="left:calc(${l}% + 8px);top:${k?'-6px':'9px'};color:${k?'var(--muted)':'#fff'}">${fmt(a)} – ${fmt(b)}</div>`:l+w>74?`<div class="lab" style="right:calc(${100-l}% + 6px)">${fmt(a)} – ${fmt(b)}</div>`:`<div class="lab" style="left:calc(${l+w}% + 6px)">${fmt(a)} – ${fmt(b)}</div>`}`;
+ h+=`<div class="c ${k}">${n}</div><div class="c d ${k}">${d}${T('d','d')}</div><div class="c tl" style="min-height:36px">${wk}${tet}${bar}</div>`;
+});
+document.getElementById('g').innerHTML=h;}
+draw();window.HT_ON.push(draw);
+</script><script>
+(function(){
+var btn=document.getElementById('htMusic');if(!btn)return;
+var ctx=null,master=null,bus=null,on=false,timer=null,bar=0,duck=1,VOL=0.34,next=0,noise=null;
+var BPM=138,B=60/BPM,SW=B*2/3;
+var PR=[{r:38,v:[53,57,60,64]},{r:43,v:[53,57,59,64]},{r:36,v:[52,55,59,62]},{r:45,v:[55,58,61,65]},
+        {r:41,v:[52,57,60,64]},{r:40,v:[50,55,59,62]},{r:38,v:[53,57,60,64]},{r:43,v:[53,56,59,63]}];
+var SC=[62,64,65,67,69,72,74,76,77,79];
+function f(n){return 440*Math.pow(2,(n-69)/12)}
+function init(){ctx=new (window.AudioContext||window.webkitAudioContext)();master=ctx.createGain();master.gain.value=0;
+ var comp=ctx.createDynamicsCompressor();comp.threshold.value=-18;comp.ratio.value=3;
+ bus=ctx.createGain();bus.gain.value=1;var c=ctx.createConvolver(),len=ctx.sampleRate*1.6,b=ctx.createBuffer(2,len,ctx.sampleRate);
+ for(var ch=0;ch<2;ch++){var d=b.getChannelData(ch);for(var i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,3);}c.buffer=b;
+ var wet=ctx.createGain();wet.gain.value=0.22;bus.connect(comp);bus.connect(c);c.connect(wet);wet.connect(comp);comp.connect(master);master.connect(ctx.destination);
+ var nl=ctx.sampleRate*0.5;noise=ctx.createBuffer(1,nl,ctx.sampleRate);var nd=noise.getChannelData(0);for(var k=0;k<nl;k++)nd[k]=Math.random()*2-1;}
+function tone(type,n,t,d,v,att){var o=ctx.createOscillator(),g=ctx.createGain();o.type=type;o.frequency.value=f(n);
+ g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+(att||0.008));g.gain.exponentialRampToValueAtTime(0.0008,t+d);o.connect(g);g.connect(bus);o.start(t);o.stop(t+d+0.05);}
+function keys(n,t,d,v){tone('sine',n,t,d,v,0.006);tone('sine',n+12,t,d*0.5,v*0.25,0.004);tone('triangle',n,t,d*0.3,v*0.2,0.003);}
+function cym(t,v,dur,hp){var s=ctx.createBufferSource();s.buffer=noise;var fl=ctx.createBiquadFilter();fl.type='highpass';fl.frequency.value=hp||7000;
+ var g=ctx.createGain();g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(0.0005,t+dur);s.connect(fl);fl.connect(g);g.connect(bus);s.start(t);s.stop(t+dur+0.02);}
+function kick(t,v){var o=ctx.createOscillator(),g=ctx.createGain();o.frequency.setValueAtTime(110,t);o.frequency.exponentialRampToValueAtTime(45,t+0.12);
+ g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(0.001,t+0.18);o.connect(g);g.connect(bus);o.start(t);o.stop(t+0.2);}
+function playBar(t){var c=PR[bar%PR.length],nx=PR[(bar+1)%PR.length];
+ var walk=[c.r,c.r+(Math.random()<.5?4:3),c.r+7,nx.r+(Math.random()<.5?1:-1)];
+ walk.forEach(function(n,i){tone('triangle',n,t+i*B,B*0.9,0.22,0.01);tone('sine',n,t+i*B,B*0.8,0.16,0.01);});
+ for(var i=0;i<4;i++){cym(t+i*B,0.07,0.32);if(i==1||i==3){cym(t+i*B+SW,0.05,0.18);cym(t+i*B,0.035,0.05,4000);}}
+ kick(t,0.35);if(Math.random()<.5)kick(t+2*B+SW,0.2);
+ var hits=[[1,SW,0.18],[3,0,0.22],[2,SW,0.12]];
+ hits.forEach(function(h){if(Math.random()<.85)c.v.forEach(function(n){keys(n,t+h[0]*B+h[1],0.45,0.035*(h[2]/0.18));});});
+ for(var b8=0;b8<8;b8++){if(Math.random()<.42){var tt=t+Math.floor(b8/2)*B+(b8%2?SW:0);keys(SC[Math.floor(Math.random()*SC.length)]+(bar%4==3?2:0),tt,0.35,0.07);}}
+ bar++;}
+function loop(){while(next<ctx.currentTime+0.6){playBar(next);next+=4*B;}}
+function setVol(){if(!ctx)return;var v=on?VOL*duck:0;master.gain.cancelScheduledValues(ctx.currentTime);master.gain.setTargetAtTime(v,ctx.currentTime,0.25);}
+function label(){var vi=window.HT_LANG!=='en';btn.setAttribute('aria-pressed',on);btn.title=on?(vi?'Tắt nhạc nền':'Music off'):(vi?'Bật nhạc nền':'Music on');
+ btn.querySelector('span').textContent=on?(vi?'Nhạc: bật':'Music: on'):(vi?'Nhạc nền':'Music');btn.classList.toggle('mon',on);}
+btn.addEventListener('click',function(){try{if(!ctx)init();if(ctx.state==='suspended')ctx.resume();on=!on;
+ if(on){if(!timer){next=ctx.currentTime+0.1;loop();timer=setInterval(loop,200);}}else{setTimeout(function(){if(!on&&timer){clearInterval(timer);timer=null;}},800);}
+ setVol();}catch(e){btn.hidden=true;}label();});
+document.addEventListener('visibilitychange',function(){if(!ctx)return;if(document.hidden)ctx.suspend();else if(on){ctx.resume();next=Math.max(next,ctx.currentTime+0.1);}});
+window.HT_MUSIC_DUCK=function(x){duck=x?0.2:1;setVol();};
+if(window.HT_ON)window.HT_ON.push(label);label();
+})();
+</script>
+</body></html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="ht_icon.png">
+<meta property="og:title" content="HouseTech · Chọn gói & tự ra giá">
+<meta property="og:description" content="HouseTech · Tổng thầu thiết kế, xây dựng &amp; nội thất · Caraworld Cam Ranh">
+<meta property="og:image" content="https://dangdilam.github.io/HT--sale-2/HT_anh_xem_truoc_link.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dangdilam.github.io/HT--sale-2/goi/">
+<title>HT- SALE · Chọn gói đầu tư</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* HouseTech: navy nền chính, kem nền giấy, vàng đồng nhấn. Bố cục: cấu hình bên trái, bảng tổng hợp dính bên phải */
+  --navy:#17253b; --navy-2:#24364f; --cream:#f6f1e7; --paper:#fffdf8; --gold:#b48a4f; --line:#e3dacb; --muted:#6c6a66; --ink:#1d1f24;
+  --ok:#2f6b4f;
+  --f:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--cream);color:var(--ink);font-family:var(--f);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.top{background:var(--navy);color:#fff}
+.top .in{max-width:1180px;margin:0 auto;padding:22px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.top img{height:46px;width:auto}
+.top .t{display:flex;flex-direction:column;gap:2px}
+.top .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#cdb38a}
+.top h1{margin:0;font-weight:300;font-size:26px;letter-spacing:.06em;text-transform:uppercase;text-wrap:balance}
+.top .tag{margin-left:auto;font-size:12px;letter-spacing:.14em;color:#aab3c2;text-transform:uppercase}
+main{max-width:1180px;margin:0 auto;padding:24px 20px 60px;display:grid;grid-template-columns:minmax(0,1fr) 370px;gap:24px;align-items:start}
+@media (max-width:920px){main{grid-template-columns:1fr}}
+section{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:20px}
+.stack{display:flex;flex-direction:column;gap:20px}
+h2{margin:0 0 4px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--navy)}
+.sub{margin:0 0 14px;color:var(--muted);font-size:13.5px}
+label{font-size:13px;color:var(--muted)}
+.area{display:flex;gap:12px;align-items:end;flex-wrap:wrap}
+.field{display:flex;flex-direction:column;gap:6px}
+input[type=number],input[type=text],select{font:inherit;font-size:20px;padding:10px 12px;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--ink);width:180px;font-variant-numeric:tabular-nums}
+input:focus-visible,select:focus-visible,button:focus-visible,.pk:focus-within{outline:2px solid var(--gold);outline-offset:2px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;color:var(--navy)}
+.chip:hover{border-color:var(--gold)}
+.pkgs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.pkgs{grid-template-columns:1fr}}
+.pk{position:relative;border:1px solid var(--line);border-radius:6px;padding:16px;cursor:pointer;background:#fff;display:flex;flex-direction:column;gap:8px;transition:border-color .15s}
+.pk input{position:absolute;opacity:0;pointer-events:none}
+.pk:hover{border-color:var(--gold)}
+.pk.on{border-color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy);background:#fbf8f2}
+.pk .code{display:flex;align-items:center;justify-content:space-between}
+.pk .code b{font-size:20px;letter-spacing:.06em;color:var(--navy)}
+.badge{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--cream);color:var(--gold);font-weight:600}
+.pk .nm{font-weight:500;font-size:14px}
+.pk .rate{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.pk .rate strong{color:var(--ink);font-size:15px}
+.pk .tot{font-size:18px;font-weight:600;color:var(--navy);font-variant-numeric:tabular-nums}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+td.c,th.c{text-align:center}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+.yes{color:var(--ok);font-weight:700}
+.no{color:#b9b2a6}
+col.hl,td.hl,th.hl{background:#f3ece0}
+.wrap{overflow-x:auto}
+.extras{display:grid;grid-template-columns:1fr;gap:6px}
+.ex{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid var(--line);border-radius:4px;background:#fff;cursor:pointer}
+.ex input{margin-top:4px;accent-color:var(--navy);width:16px;height:16px}
+.ex .rn{font-weight:600;color:var(--gold);min-width:34px}
+.ex small{display:block;color:var(--muted)}
+aside{position:sticky;top:16px;display:flex;flex-direction:column;gap:16px}
+.sum{background:var(--navy);color:#fff;border-radius:6px;padding:22px}
+.sum .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#cdb38a}
+.sum .big{font-size:32px;font-weight:600;letter-spacing:.01em;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+.sum .words{font-size:12.5px;color:#c7cdd8}
+.sum dl{display:grid;grid-template-columns:1fr auto;gap:6px 12px;margin:16px 0 0;font-size:13.5px;font-variant-numeric:tabular-nums}
+.sum dt{color:#aab3c2}.sum dd{margin:0;text-align:right}
+.sum hr{border:0;border-top:1px solid rgba(255,255,255,.15);margin:14px 0}
+.vat{display:flex;gap:6px;margin-top:6px}
+.vat button{flex:1;font:inherit;font-size:12.5px;padding:7px 0;border-radius:4px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;cursor:pointer}
+.vat button.on{background:var(--gold);border-color:var(--gold);color:var(--navy);font-weight:600}
+.btn{font:inherit;font-weight:600;font-size:14px;padding:12px 14px;border-radius:4px;border:0;background:var(--gold);color:var(--navy);cursor:pointer;width:100%}
+/*req*/
+#imgOut img{width:100%;border:1px solid var(--line);border-radius:4px;display:block}
+
+.req{background:#fff;border:1px solid var(--gold);border-radius:6px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.req h3{margin:0;font-size:16px;color:var(--navy)}
+.rqs{margin:0;font-size:12.5px;color:var(--muted)}
+.req input{width:100%;font:inherit;font-size:14px;padding:8px 10px;border:1px solid var(--line);border-radius:4px;box-sizing:border-box;background:#fff}
+.req textarea{width:100%;font:inherit;font-size:14px;padding:8px 10px;border:1px solid var(--line);border-radius:4px;resize:vertical;box-sizing:border-box}
+.req #rqPrev{font-size:12px;margin-top:8px;background:#faf7f0}
+a.btn{display:block;text-align:center;text-decoration:none;box-sizing:border-box}
+.btn.zalo{background:#0068ff;color:#fff}
+.btn.zalo:focus-visible,a.btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--navy);font-weight:500}
+.note{font-size:12.5px;color:var(--muted);margin:0;padding-left:18px}
+.note li{margin:3px 0}
+.pay td{border-color:rgba(255,255,255,.12)}
+.pay td:first-child{color:var(--gold);font-weight:600;width:28px}
+.toast{font-size:12.5px;color:var(--ok);min-height:18px;margin:6px 0 0}
+details{border-top:1px solid var(--line);padding-top:12px}
+summary{cursor:pointer;font-size:13px;color:var(--navy);font-weight:500}
+.rates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
+.rates input{width:100%;font-size:15px}
+.contact{font-size:13px;color:var(--muted)}
+.contact b{color:var(--navy)}
+footer{max-width:1180px;margin:0 auto;padding:0 20px 40px;color:var(--muted);font-size:12px;letter-spacing:.08em}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.htnav{position:sticky;top:0;z-index:50;background:#0f1a2b;color:#fff;font-family:'Be Vietnam Pro',system-ui,sans-serif}
+.htnav .in{max-width:1280px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;gap:10px;min-height:44px}
+.htnav a.hb,.htnav button{font:inherit;font-size:13px;color:#fff;background:transparent;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;line-height:1}
+.htnav a.hb:hover,.htnav button:hover{border-color:#cdb38a;color:#e8d6b6}
+.htnav a.hb:focus-visible,.htnav button:focus-visible{outline:2px solid #cdb38a;outline-offset:2px}
+.htnav .sp{flex:1}.htnav button.mon{border-color:#cdb38a;color:#e8d6b6}@media(max-width:520px){.htnav #htMusic span{display:none}.htnav .in{gap:6px;padding:8px 12px}}@media(max-width:430px){.htnav .brand{display:none}}
+.htnav .brand{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#cdb38a}
+.htnav .lang{display:inline-flex;border:1px solid rgba(255,255,255,.25);border-radius:999px;overflow:hidden}
+.htnav .lang button{border:0;border-radius:0;padding:6px 11px}
+.htnav .lang button.on{background:#b48a4f;color:#0f1a2b;font-weight:600}
+.htnav svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.htdrawer{position:fixed;inset:0;z-index:60;display:none}
+.htdrawer.open{display:block}
+.htdrawer .bg{position:absolute;inset:0;background:rgba(15,26,43,.45)}
+.htdrawer .pn{position:absolute;top:0;right:0;height:100%;width:min(360px,88vw);background:#fffdf8;box-shadow:-8px 0 30px rgba(0,0,0,.18);padding:20px;display:flex;flex-direction:column;gap:6px;overflow:auto;font-family:'Be Vietnam Pro',system-ui,sans-serif}
+.htdrawer .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.htdrawer .hd b{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#17253b}
+.htdrawer .hd button{font:inherit;border:1px solid #e3dacb;background:#fff;border-radius:999px;padding:5px 12px;cursor:pointer;color:#17253b}
+.htdrawer a{display:block;padding:11px 12px;border-radius:6px;color:#17253b;text-decoration:none;font-size:14.5px;border:1px solid transparent}
+.htdrawer a:hover{background:#f6f1e7;border-color:#e3dacb}
+.htdrawer a.cur{background:#17253b;color:#fff}
+.htdrawer a.home{font-weight:600;border-color:#e3dacb;margin-bottom:6px}
+.htdrawer .ft{margin-top:auto;font-size:12px;color:#6c6a66;padding-top:12px}
+</style>
+</head>
+<body>
+<nav class="htnav" aria-label="HT- SALE"><div class="in"><a class="hb" id="htHome" href="../"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span data-en="HT- SALE home">Trang chính</span></a><span class="brand">HouseTech · HT- SALE</span><span class="sp"></span><button id="htMusic" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span>Nhạc nền</span></button>
+<button id="htMenuBtn" aria-haspopup="dialog" aria-controls="htDrawer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span data-en="Menu">Menu</span></button>
+<div class="lang" role="group" aria-label="Ngôn ngữ / Language"><button data-l="vi">VI</button><button data-l="en">EN</button></div>
+</div></nav>
+<div class="htdrawer" id="htDrawer" role="dialog" aria-modal="true" aria-label="Menu"><div class="bg" data-close></div><div class="pn">
+<div class="hd"><b data-en="All pages">Tất cả trang</b><button data-close data-en="Close">Đóng</button></div>
+<div id="htLinks"></div><div class="ft" data-en="Pages marked ↗ open in the slide, doc or whiteboard editor.">Trang có dấu ↗ mở trong trình xem slide, tài liệu hoặc whiteboard.</div></div></div>
+<header class="top"><div class="in">
+  <img src="data:image/png;base64,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" alt="HouseTech">
+  <div class="t"><span class="eyebrow" data-en="HT- SALE · Quick estimate">HT- SALE · Dự toán nhanh</span><h1 data-en="Choose a package">Chọn gói đầu tư</h1></div>
+  <span class="tag">One Home. One Partner.</span>
+</div></header>
+
+<main>
+  <div class="stack">
+    <section>
+      <h2 data-en="1 · Priced floor area">1 · Diện tích tính giá</h2>
+      <p class="sub" data-en="Interior floor area, excluding balconies, gardens and roof.">Diện tích sàn nội thất, không gồm ban công, sân vườn và mái nhà.</p>
+      <div class="area">
+        <div class="field"><label for="area" data-en="Area (m²)">Diện tích (m²)</label><input id="area" type="number" min="10" max="5000" step="1" value="209" inputmode="decimal"></div>
+        <div class="field"><label for="proj" data-en="Unit / project">Tên căn / dự án</label><input id="proj" type="text" value="" placeholder="VD: Căn D17A, Caraworld" data-en="e.g. Unit D17A, Caraworld" style="width:240px;font-size:15px"></div>
+      </div>
+      <div class="chips" style="margin-top:12px" aria-label="Diện tích nhanh">
+        <button class="chip" data-a="120">120 m²</button><button class="chip" data-a="160">160 m²</button><button class="chip" data-a="209">209 m²</button><button class="chip" data-a="250">250 m²</button><button class="chip" data-a="320">320 m²</button>
+      </div>
+    </section>
+
+    <section>
+      <h2 data-en="2 · Choose a package">2 · Chọn gói</h2>
+      <p class="sub" data-en="Rate per m² of interior, before tax. Tap a package to see the total.">Đơn giá tính trên m² nội thất, trước thuế. Chạm vào một gói để xem tổng.</p>
+      <div class="pkgs" id="pkgs"></div>
+    </section>
+
+    <section>
+      <h2 data-en="3 · What each package includes">3 · Nội dung các gói</h2>
+      <p class="sub" data-en="● included · – not included. The shaded column is the selected package.">● có trong gói · – không bao gồm. Cột được tô là gói đang chọn.</p>
+      <div class="wrap"><table id="matrix"></table></div>
+    </section>
+
+    <section>
+      <h2 data-en="4 · Other items (quoted separately)">4 · Hạng mục khác (báo giá riêng)</h2>
+      <p class="sub" data-en="Not in the package price. Tick to add them to the quote request for HouseTech.">Không thuộc giá gói. Đánh dấu để ghi vào yêu cầu báo giá gửi HouseTech.</p>
+      <div class="extras" id="extras"></div>
+    </section>
+  </div>
+
+  <aside>
+    <div class="sum" aria-live="polite">
+      <div class="eyebrow" id="sumPkg">Gói A3</div>
+      <div class="big" id="sumTotal">–</div>
+      <div class="words" id="sumNote">trước thuế</div>
+      <div class="vat" role="group" aria-label="Thuế GTGT">
+        <button data-v="0" class="on" data-en="Excl. VAT">Chưa VAT</button><button data-v="8">VAT 8%</button><button data-v="10">VAT 10%</button>
+      </div>
+      <dl>
+        <dt data-en="Area">Diện tích</dt><dd id="sArea">–</dd>
+        <dt data-en="Rate / m²">Đơn giá / m²</dt><dd id="sRate">–</dd>
+        <dt data-en="Value before tax">Giá trị trước thuế</dt><dd id="sPre">–</dd>
+        <dt id="sVatL">Thuế GTGT</dt><dd id="sVat">–</dd>
+      </dl>
+      <hr>
+      <div class="eyebrow" style="margin-bottom:6px" data-en="Payment schedule">Tiến độ thanh toán</div>
+      <table class="pay" id="pay" style="color:#fff;font-size:12.5px"></table>
+    </div>
+    <section style="display:flex;flex-direction:column;gap:10px">
+      <button class="btn" id="saveImg" type="button" data-en="Save price sheet as image">Lưu bảng giá (hình ảnh)</button>
+      <div id="imgOut" hidden><img id="imgPrev" alt="Bảng giá dự toán sơ bộ HouseTech"><p class="rqs" id="imgHint"></p></div>
+      <p class="toast" id="toast" role="status"></p>
+      <section class="req" aria-labelledby="rqH">
+        <h3 id="rqH" data-en="Request a quote from HouseTech">Gửi yêu cầu báo giá cho HouseTech</h3>
+        <p class="rqs" data-en="Your selection above is included automatically. Only HouseTech receives it.">Gói, diện tích và hạng mục bạn chọn ở trên được ghi sẵn. Chỉ HouseTech nhận được yêu cầu này.</p>
+        <div class="field"><label for="rqName" data-en="Your name">Họ tên</label><input id="rqName" type="text" autocomplete="name"></div>
+        <div class="field"><label for="rqPhone" data-en="Phone / Zalo">Số điện thoại / Zalo</label><input id="rqPhone" type="tel" inputmode="tel" autocomplete="tel"></div>
+        <div class="field"><label for="rqNote" data-en="What do you need?">Nhu cầu của bạn</label><textarea id="rqNote" rows="3" placeholder="VD: căn góc 3 tầng, muốn khảo sát trong tuần này"></textarea></div>
+        <a class="btn zalo" id="rqZalo" href="https://zalo.me/0918107001" target="_blank" rel="noopener"><span data-en="Send via Zalo">Gửi qua Zalo</span> · 0918 107 001</a>
+        <p class="toast" id="rqToast" role="status"></p>
+        <a class="btn ghost" id="rqFile" href="https://forms.gle/U8npFBTyYv9dzbYz5" target="_blank" rel="noopener" data-en="Send house files (Google Form)">Gửi hồ sơ, bản vẽ căn nhà (Google Form)</a>
+        <p class="rqs" data-en="Upload drawings or photos privately; only HouseTech can see them (Google sign-in required).">Up bản vẽ, ảnh hiện trạng riêng tư, chỉ HouseTech xem được (cần đăng nhập Google).</p>
+        <details><summary data-en="See the request text">Xem nội dung yêu cầu</summary><textarea id="rqPrev" rows="9" readonly></textarea></details>
+      </section>
+      <ul class="note">
+        <li data-en="Estimate valid for 15 days from the date sent.">Dự toán có hiệu lực 15 ngày kể từ ngày gửi.</li>
+        <li data-en="12-month warranty on all work.">Bảo hành 12 tháng với tất cả hạng mục.</li>
+        <li data-en="50% off the design fee matching the construction package signed with HT.">Giảm 50% phí thiết kế tương ứng giá trị gói thầu thi công ký với HT.</li>
+        <li data-en="This is a preliminary per-m² estimate; the final price follows the bill of quantities and approved design.">Con số là dự toán sơ bộ theo m²; giá chính thức theo bảng khối lượng và hồ sơ thiết kế được duyệt.</li>
+      </ul>
+      <p class="contact"><span data-en="Contact HouseTech:">Liên hệ HouseTech:</span> <b>0918 107 001</b></p>
+      <details>
+        <summary data-en="Adjust package rates (internal)">Điều chỉnh đơn giá gói (nội bộ)</summary>
+        <div class="rates" id="rates"></div>
+        <p class="note" style="padding:8px 0 0" data-en="Changes are saved in this browser only. To change prices for everyone, update the original page.">Thay đổi chỉ lưu trên trình duyệt này. Muốn đổi giá cho mọi người xem, cập nhật bản gốc của trang.</p>
+        <button class="btn ghost" id="reset" style="margin-top:8px" data-en="Restore original rates">Khôi phục đơn giá gốc</button>
+      </details>
+    </section>
+  </aside>
+</main>
+<footer data-en="HOUSETECH CO., LTD · Design consulting – Construction · Property care and operation">CÔNG TY TNHH HOUSETECH · Tư vấn thiết kế – Thi công · Chăm sóc và vận hành bất động sản</footer>
+
+<script>
+(function(){
+var P=[{"id": "home", "url": "../", "vi": "Trang chính HT- SALE", "en": "HT- SALE home", "web": true}, {"id": "goi", "url": "../goi/", "vi": "01 · Chọn gói đầu tư & tự ra giá", "en": "01 · Package picker & pricing", "web": true}, {"id": "slides", "url": "../thietke/", "vi": "02 · Thiết kế mẫu (slide)", "en": "02 · Sample design (slides)", "web": true}, {"id": "vatlieu", "url": "../vatlieu/", "vi": "03 · Vật liệu & thiết bị mẫu", "en": "03 · Sample materials & fittings", "web": true}, {"id": "dutoan", "url": "../dutoan/", "vi": "04 · Dự toán kinh phí đầu tư", "en": "04 · Investment cost estimate", "web": true}, {"id": "hopdong", "url": "../hopdong/", "vi": "05 · Hợp đồng thi công mẫu", "en": "05 · Sample construction contract", "web": true}, {"id": "tiendo", "url": "../tiendo/", "vi": "06 · Tiến độ thi công mẫu", "en": "06 · Sample construction schedule", "web": true}, {"id": "wb", "url": "../quytrinh/", "vi": "07 · Quy trình bán hàng & các gói", "en": "07 · Sales process & packages", "web": true}, {"id": "care", "url": "../care/", "vi": "08 · HouseTech Care", "en": "08 · HouseTech Care", "web": true}, {"id": "lienhe", "url": "../lienhe/", "vi": "09 · Liên hệ", "en": "09 · Contact", "web": true}], CUR="goi";
+var L='vi'; try{ if(location.hash==='#en') L='en'; else { var s=localStorage.getItem('ht_lang'); if(s==='en'&&!location.hash) L='en'; } }catch(e){}
+window.HT_LANG=L; window.HT_ON=[];
+window.T=function(vi,en){return window.HT_LANG==='en'?en:vi;};
+var orig=new WeakMap();
+function apply(){
+  document.documentElement.lang=window.HT_LANG;
+  document.querySelectorAll('[data-en]').forEach(function(el){
+    if(!orig.has(el)) orig.set(el, el.tagName==='INPUT'?el.placeholder:el.innerHTML);
+    var v=window.HT_LANG==='en'?el.getAttribute('data-en'):orig.get(el);
+    if(el.tagName==='INPUT') el.placeholder=v; else el.innerHTML=v;
+  });
+  document.querySelectorAll('.htnav .lang button').forEach(function(b){b.classList.toggle('on',b.dataset.l===window.HT_LANG);b.setAttribute('aria-pressed',b.dataset.l===window.HT_LANG);});
+  var box=document.getElementById('htLinks');
+  box.innerHTML=P.map(function(p,i){var u=p.url+(p.web&&window.HT_LANG==='en'?'#en':'');return '<a href="'+u+'" class="'+(i===0?'home ':'')+(p.id===CUR?'cur':'')+'"'+(p.id===CUR?' aria-current="page"':'')+'>'+(window.HT_LANG==='en'?p.en:p.vi)+(p.web?'':' ↗')+'</a>';}).join('');
+  var h=document.getElementById('htHome'); if(h) h.href=P[0].url+(window.HT_LANG==='en'?'#en':'');
+  document.querySelectorAll('a[data-web]').forEach(function(a){var b=a.getAttribute('href').split('#')[0];a.setAttribute('href',b+(window.HT_LANG==='en'?'#en':''));});
+  window.HT_ON.forEach(function(f){try{f();}catch(e){}});
+}
+window.HT_apply=apply;
+document.querySelectorAll('.htnav .lang button').forEach(function(b){b.addEventListener('click',function(){window.HT_LANG=b.dataset.l;try{localStorage.setItem('ht_lang',window.HT_LANG);history.replaceState(null,'',window.HT_LANG==='en'?'#en':location.pathname+location.search);}catch(e){}apply();});});
+var d=document.getElementById('htDrawer'), mb=document.getElementById('htMenuBtn');
+function close(){d.classList.remove('open');mb.focus();}
+mb.addEventListener('click',function(){d.classList.add('open');var a=d.querySelector('a');if(a)a.focus();});
+d.querySelectorAll('[data-close]').forEach(function(x){x.addEventListener('click',close);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.classList.contains('open'))close();});
+window.addEventListener('hashchange',function(){var n=location.hash==='#en'?'en':'vi';if(n!==window.HT_LANG){window.HT_LANG=n;apply();}});
+document.addEventListener('DOMContentLoaded',apply); if(document.readyState!=='loading') apply();
+})();
+</script>
+<script>
+const DEFAULT_RATES={A1:6200000,A2:5000000,A3:9000000,A4:10050000};
+const PKGS=[
+ {id:'A1',name:['Hoàn thiện đến đầu chờ + chống thấm + ống điều hòa','Finish to connection points + waterproofing + AC piping'],desc:['A2 + chống thấm ngoại thất, ô thang máy + hệ thống ống điều hòa','A2 + exterior waterproofing, lift shaft + AC piping'],inc:['I','II','III','IV']},
+ {id:'A2',name:['Hoàn thiện nội thất đến đầu chờ','Interior finish to connection points'],desc:['Chi phí chung + phần thô hoàn thiện nội thất đến đầu chờ','General costs + interior shell and finish to connection points'],inc:['I','III']},
+ {id:'A3',name:['Tổng thầu trọn gói hoàn thiện nội thất','Turnkey interior finish'],desc:['Bàn giao nhà ở được: thiết bị điện, vệ sinh, đồ gỗ','Ready to move in: electrical, sanitary ware, joinery'],inc:['I','III','IV','V','VI','VII'],tag:['Phổ biến','Popular']},
+ {id:'A4',name:['Trọn gói + chống thấm ngoại thất, ô thang máy','Turnkey + exterior waterproofing, lift shaft'],desc:['A3 + chống thấm ngoại thất và xây dựng ô thang máy','A3 + exterior waterproofing and lift shaft construction'],inc:['I','II','III','IV','V','VI','VII'],tag:['Đầy đủ nhất','Most complete']}
+];
+const ITEMS=[['I','Chi phí chung','General costs'],['II','Chống thấm ngoại thất và ô thang máy','Exterior waterproofing and lift shaft'],['III','Phần thô hoàn thiện nội thất','Interior shell and finishing'],['IV','Hệ thống ống điều hòa không khí','Air-conditioning piping'],['V','Thiết bị điện','Electrical fittings'],['VI','Thiết bị vệ sinh','Sanitary ware'],['VII','Đồ gỗ nội thất','Interior joinery']];
+const EXTRAS=[['VIII','Phí thiết kế','Design fee','Giảm trừ 50% tương ứng giá trị gói thầu thi công ký với HT','50% off, matching the construction package signed with HT'],['IX','Thiết bị thang máy và khung hố thang','Lift equipment and shaft frame','',''],['X','Thiết bị gia dụng','Home appliances','Chậu rửa + vòi, bếp từ, máy hút mùi, kệ úp chén, tủ lạnh, máy giặt, máy sấy, máy lạnh','Sink and tap, induction hob, hood, dish rack, fridge, washer, dryer, air conditioners'],['XI','Rèm cửa','Curtains','Vải Hàn Quốc','Korean fabric'],['XII','Cây xanh sân vườn, đèn trang trí sân vườn, hàng rào','Garden planting, garden lighting, fence','',''],['XIII','Thiết bị cho bồn Onsen','Onsen tub equipment','',''],['XIV','Bít lỗ thông tầng, năng lượng mặt trời, điện 3 pha','Closing the void, solar power, 3-phase supply','','']];
+const PAY=[['Tạm ứng khi ký hợp đồng','Advance on signing',40],['Nghiệm thu phần xây tô, điện nước âm (trước che khuất)','Acceptance of masonry, concealed M&E (before covering)',25],['Nghiệm thu trần, ốp lát, đá','Acceptance of ceilings, tiling, stone',20],['Nghiệm thu bàn giao, quyết toán','Handover and final account',10],['Khi nhận thư bảo lãnh bảo hành','On receipt of the warranty bond',5]];
+const t=a=>a?(window.HT_LANG==='en'?a[1]:a[0]):'';
+let rates={...DEFAULT_RATES};
+try{const s=JSON.parse(localStorage.getItem('ht_rates2')||'null'); if(s) rates={...rates,...s};}catch(e){}
+let sel='A3', vat=0, extras=new Set();
+try{const s=localStorage.getItem('ht_pkg'); if(s&&DEFAULT_RATES[s]) sel=s;}catch(e){}
+const $=id=>document.getElementById(id);
+const EN=()=>window.HT_LANG==='en';
+const fmt=n=>Math.round(n).toLocaleString(EN()?'en-US':'vi-VN');
+const cur=n=>EN()?fmt(n)+' VND':fmt(n)+' đ';
+function short(n){ if(EN()) return n>=1e9?(n/1e9).toLocaleString('en-US',{maximumFractionDigits:2})+' billion VND':(n/1e6).toLocaleString('en-US',{maximumFractionDigits:0})+' million VND'; if(n>=1e9) return (n/1e9).toLocaleString('vi-VN',{maximumFractionDigits:2})+' tỷ'; return (n/1e6).toLocaleString('vi-VN',{maximumFractionDigits:0})+' triệu'; }
+function area(){const v=parseFloat($('area').value); return isFinite(v)&&v>0?v:0;}
+function renderPkgs(){
+  const a=area();
+  $('pkgs').innerHTML=PKGS.map(p=>`<label class="pk ${p.id===sel?'on':''}" for="r${p.id}">
+    <input type="radio" name="pkg" id="r${p.id}" value="${p.id}" ${p.id===sel?'checked':''}>
+    <div class="code"><b>${T('GÓI','PACKAGE')} ${p.id}</b>${p.tag?`<span class="badge">${t(p.tag)}</span>`:''}</div>
+    <div class="nm">${t(p.name)}</div>
+    <div class="rate"><strong>${fmt(rates[p.id])}</strong> ${T('đ/m²','VND/m²')}</div>
+    <div class="tot">${a?cur(rates[p.id]*a):T('Nhập diện tích','Enter the area')}</div>
+    <div class="rate">${t(p.desc)}</div></label>`).join('');
+  document.querySelectorAll('input[name=pkg]').forEach(r=>r.addEventListener('change',e=>{sel=e.target.value;try{localStorage.setItem('ht_pkg',sel)}catch(_){}render();}));
+}
+function renderMatrix(){
+  let h=`<thead><tr><th>${T('Hạng mục','Item')}</th>`+PKGS.map(p=>`<th class="c ${p.id===sel?'hl':''}">${p.id}</th>`).join('')+'</tr></thead><tbody>';
+  ITEMS.forEach(([rn,vi,en])=>{h+=`<tr><td><span style="color:var(--gold);font-weight:600;display:inline-block;min-width:30px">${rn}</span>${T(vi,en)}</td>`+PKGS.map(p=>`<td class="c ${p.id===sel?'hl':''}">${p.inc.includes(rn)?`<span class="yes" aria-label="${T('có','yes')}">●</span>`:`<span class="no" aria-label="${T('không','no')}">–</span>`}</td>`).join('')+'</tr>';});
+  $('matrix').innerHTML=h+'</tbody>';
+}
+function renderExtras(){
+  $('extras').innerHTML=EXTRAS.map(([rn,vi,en,dv,de])=>`<label class="ex" for="x${rn}"><input type="checkbox" id="x${rn}" value="${rn}" ${extras.has(rn)?'checked':''}><span class="rn">${rn}</span><span>${T(vi,en)}${dv?`<small>${T(dv,de)}</small>`:''}</span></label>`).join('');
+  document.querySelectorAll('#extras input').forEach(c=>c.addEventListener('change',e=>{e.target.checked?extras.add(e.target.value):extras.delete(e.target.value);}));
+}
+function renderRates(){
+  $('rates').innerHTML=PKGS.map(p=>`<div class="field"><label for="rate${p.id}">${T('Gói','Package')} ${p.id} (${T('đ/m²','VND/m²')})</label><input type="number" id="rate${p.id}" step="50000" min="0" value="${rates[p.id]}"></div>`).join('');
+  PKGS.forEach(p=>$('rate'+p.id).addEventListener('input',e=>{const v=parseFloat(e.target.value);if(isFinite(v)&&v>=0){rates[p.id]=v;try{localStorage.setItem('ht_rates2',JSON.stringify(rates))}catch(_){}renderPkgs();renderSum();}}));
+}
+function totals(){const a=area(),pre=rates[sel]*a,v=pre*vat/100;return{a,pre,v,tot:pre+v};}
+function renderSum(){
+  const r=totals(), p=PKGS.find(x=>x.id===sel);
+  $('sumPkg').textContent=T('Gói ','Package ')+sel+' · '+t(p.name);
+  $('sumTotal').textContent=r.a?cur(r.tot):'–';
+  $('sumNote').textContent=r.a?('≈ '+short(r.tot)+(vat?T(' · đã gồm VAT ',' · incl. VAT ')+vat+'%':T(' · trước thuế',' · before tax'))):T('Nhập diện tích để tính','Enter the area to calculate');
+  $('sArea').textContent=r.a?r.a.toLocaleString(EN()?'en-US':'vi-VN')+' m²':'–';
+  $('sRate').textContent=cur(rates[sel]);
+  $('sPre').textContent=cur(r.pre);
+  $('sVatL').textContent=vat?T('Thuế GTGT ','VAT ')+vat+'%':T('Thuế GTGT','VAT');
+  $('sVat').textContent=vat?cur(r.v):T('chưa tính','not included');
+  $('pay').innerHTML=PAY.map(([vi,en,pc],i)=>`<tr><td>${i+1}</td><td style="color:#c7cdd8">${T(vi,en)} · ${pc}%</td><td class="r">${fmt(r.tot*pc/100)}</td></tr>`).join('');
+  document.querySelectorAll('.vat button').forEach(b=>b.classList.toggle('on',+b.dataset.v===vat));
+}
+function render(){renderPkgs();renderMatrix();renderSum();}
+$('area').addEventListener('input',render);
+document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{$('area').value=c.dataset.a;render();}));
+document.querySelectorAll('.vat button').forEach(b=>b.addEventListener('click',()=>{vat=+b.dataset.v;renderSum();}));
+$('reset').addEventListener('click',()=>{rates={...DEFAULT_RATES};try{localStorage.removeItem('ht_rates2')}catch(_){}renderRates();render();});
+function sumText(){
+  const r=totals(),p=PKGS.find(x=>x.id===sel),proj=$('proj').value.trim();
+  const ex=EXTRAS.filter(e=>extras.has(e[0])).map(e=>`  - ${e[0]}. ${T(e[1],e[2])}`).join('\n');
+  const txt=EN()
+   ?`HOUSETECH · PRELIMINARY ESTIMATE\n${proj?'Project: '+proj+'\n':''}Package ${sel}: ${t(p.name)}\nPriced area: ${r.a.toLocaleString('en-US')} m²\nRate: ${cur(rates[sel])}/m²\nValue before tax: ${cur(r.pre)}\n${vat?`VAT ${vat}%: ${cur(r.v)}\nTotal incl. VAT: ${cur(r.tot)}\n`:''}Includes: ${p.inc.map(x=>ITEMS.find(i=>i[0]===x)[2]).join('; ')}\n${ex?'Items to quote separately:\n'+ex+'\n':''}Payments: ${PAY.map(x=>x[2]+'%').join(' – ')}\nEstimate valid for 15 days. 12-month warranty.\nHouseTech: 0918 107 001`
+   :`HOUSETECH · DỰ TOÁN SƠ BỘ\n${proj?'Công trình: '+proj+'\n':''}Gói ${sel}: ${t(p.name)}\nDiện tích tính giá: ${r.a.toLocaleString('vi-VN')} m²\nĐơn giá: ${fmt(rates[sel])} đ/m²\nGiá trị trước thuế: ${fmt(r.pre)} đ\n${vat?`Thuế GTGT ${vat}%: ${fmt(r.v)} đ\nTổng gồm thuế: ${fmt(r.tot)} đ\n`:''}Bao gồm: ${p.inc.map(x=>ITEMS.find(i=>i[0]===x)[1]).join('; ')}\n${ex?'Hạng mục cần báo giá riêng:\n'+ex+'\n':''}Thanh toán: ${PAY.map(x=>x[2]+'%').join(' – ')}\nDự toán có hiệu lực 15 ngày. Bảo hành 12 tháng.\nLiên hệ HouseTech: 0918 107 001`;
+  return txt;
+}
+
+
+function reqText(){
+  const nm=$('rqName').value.trim(),ph=$('rqPhone').value.trim(),nt=$('rqNote').value.trim();
+  const head=T('YÊU CẦU BÁO GIÁ GỬI HOUSETECH','QUOTE REQUEST TO HOUSETECH');
+  const who=[nm&&(T('Khách hàng: ','Client: ')+nm),ph&&(T('Điện thoại: ','Phone: ')+ph)].filter(Boolean).join('\n');
+  return head+'\n'+(who?who+'\n':'')+(nt?T('Nhu cầu: ','Request: ')+nt+'\n':'')+'—\n'+sumText();
+}
+function renderReq(){ $('rqPrev').value=reqText(); }
+['rqName','rqPhone','rqNote','area','proj'].forEach(id=>$(id).addEventListener('input',renderReq));
+document.addEventListener('click',e=>{ if(e.target.closest('.pkgs,.extras,.vat,.chip')) setTimeout(renderReq,0); });
+$('rqZalo').addEventListener('click',async()=>{
+  const txt=reqText(); $('rqPrev').value=txt;
+  try{await navigator.clipboard.writeText(txt);$('rqToast').textContent=T('Đã chép yêu cầu. Trong Zalo, dán vào khung chat, đính kèm ảnh/bản vẽ căn nhà (nếu có) rồi bấm Gửi.','Request copied. In Zalo, paste it into the chat, attach photos/drawings of the house if you have them, then send.');}
+  catch(_){$('rqToast').textContent=T('Không tự chép được: hãy chép nội dung trong khung bên dưới rồi dán vào Zalo.','Could not copy automatically: copy the text in the box below and paste it into Zalo.');}
+});
+window.HT_ON.push(renderReq);
+
+let DL=null;(async()=>{try{DL=await claude.use('downloads');}catch(_){DL=null;}})();
+let LOGO=new Image();LOGO.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAADICAYAAABMM7vPAAAZ+ElEQVR42u1defQcVbH+an6ThQRCAglheUJAQWQVBWUzqEEWUR+yRAURISoiR8ADT3yIuwhBEATBYGJCQB6KiAKCKBoQkEVACChIwiaYxeyJWX5LZr73R9eQttPd0z19e5ae+s6Zk8lvum931/26bt2qunUBQ24gWSL5TZL3kTzOJGLoRBJvQfIGbsAakl8wyRg6icS7kfwzw/FDkkNNSoZ2J/EHSc5nPO4iuZ1Jy9COBBaSXyTZx2R4luS+JjlDO5F4c5LXMT2W2CTQ0C4k3pXkw2wc/ST/1yRpaCWJjyT5T7rBVJLDTKqGZpP4HJLr6Ba/s0mgoVkEHkFyGvPDsyT3M0kb8iTxm0n+ifljKcnjTeKGPEh8hEN7OAkGbBJocE3is3Owh5NiGslNrRcMWe3h6Ww9/khynPWIoRES70LyAbYP5pA80HrGkIbEh5N8zREBbyJ5jCP7ehnJj1oPGZKQ+ExH9nCF5HdIDvJlxD3maBL4ZZJivWUII/Bwktc40sJLSH4s5BpjSP7c0TVmkNzMes7gJ9iOJGc5ItgzJN8ec63BJC8hWXVwrftI7mA9aADJ95B8yRGJf0Vy64TX/STJVTYJNLgg8ekkVzsi8WSSg1Ne/xCSLzu49nKSJ1iPdh+BNyH5fUcEXkHylAz38kZHYe/1JL9qk8DuIfH2JO92ROLnXAzrJEcGFqraJNAQS5iDSD7viDC/cZlyqaUDLlDN6mISOM56vJgkPlXNABe4lOSQnO7zY47uc65NAotF4Jq7ywVWkvxkE+75QPVGuIgETjQWdD6JtyN5hyMSzyV5UBPv/Q0k73EUCTzf2NC5JN5fV1u4wD2tCDyQHEbyWksH7V4Sf0J9qy5wJclN2mB9YJ+DZ/kDye2NIZ1hD1/sKPy7huRn2+jZjia50MFzPU/yAGNL+5J4G5K3ObSH39uGz/hWkk9ZOmhxSfwOkn9zuCR/+zZ+1rEkb3c0CfySRQLbyx5e5ojE13RCkRSSQ0he5uiZZ5Lc3JjUWnt4skN7+IwOlMFn9d6z4gGLBLamA7d2aA+/TPLQDpbFYY6WUc1ppp/cSOzZw087IvG9JHcqSGHxxxxl8p1oLMu/w05yaA//qEhZYiS3JPkzR2sNv0GyZIzLxx6+UIWcFWtJnlVQOZVJftvRvOEGmwS6t4d/6UgLv0rysC6Q2Sma4JQVD5Lc2ViYvUP21cWcdNQpu3SR7MaTfMHRZPg9xsZs9vBSRyS+juSILpThOEerw/9N8lPGynTCH6SFTVzYeX0avSp1sTw3JfljRwrholrBGUPz7OGFJI82qb4u2/Po7VeSFTeT3MIkGi3o/Rzaw4+R3MukupGMP0zyXw7k+wjJ3U2iGwv4RIf+4Z+S3NKkGptBN9uBnOeTPNwkusE/fJEje3iA5NdJ9phkE5lwMx0oj3Uk39YOzyStzB8G8CMAH3DQ3GIAp4vIL4ym6fYIBLBn8M8R3wGgpB/qpxfA/SKyspv9w391ZEo8SXIfo6Wh2SQ+waF/+GaSY0yqBmmmfxjANwCcp8NTFlQAfAvAhSKyPod7HQVgKwAjAjJiyHAbJlOGDM2S4Pio34JtSsR9SeAYAqj6jg87LlQEDdyz+MyPtQDmNdPkkCbawz8E8N8Omluq9vDPc7rXSQC+DmA0gMExndys/mEDv2UWQ0Z+DABYAOASEZlSJHvY1Xq6p+OKaLfR8iHDBlyRV3mxpmlkkh8HcCWAUQ6a+5Vq4oV5VPUBMBWA+UXzwV0APiUiC/K6QCnP+hIArndA4iqA7wCYmBOJ3wXgD0biXPF+AL8nuW/HaGS1h6cA+JCD5pYBOFNEbszphfsMgEsBWD3h5mApgNPy8PeL6/V0AGYA2M1Bc88BOEVEHs2jYj2A7wI4w7jVdKxX79WFIsK2IzLJkwB836E9/Lk8bCpd9j4NwATjVEsxA8DZIrKqLWxkzR++GMBMR/bwJWoP50HiCWoPG4lbj1MA3OaqnoY4sIevAeAi73c5gLNE5Iac7OEzAEwGMNw41FZ4CcCpIvLHlhBZZ6AzHdnDz6s9/HBO9vClAD5nnGlbrAZwhohc31TTQsv5/9YRie8EcGhOJB4H4HYjcdtjUwDXaT2Nntw1MskygAv04yLv91IAXxGR3jx2NNVJXZZKQv8G8BUAj+nzRuVaSEhot5bTUPLlPARzEmp/L+m/wTwKxuRcRIWSS775hvja9l8zOC+B77ja9ash7ZcCz9Gj/9byXcYCuAhAlhICP1PtvBQ52ZijNdvM1aYyn0Z+EcUzmH1H02dJHmzKsiUrtx/RXGnnN7cPyb84IvHzeRFEVwxPcXCPv9CJrKGxfhjuoB9ec1pMh+QxJBc7IvFdJP8rJ+G9id5GiXSwDa4tl3LTJ+dmXLmdffsL3YnzfF0L5wKXkxyak8AO13JYWbCI5PFGv1xWbi/K2DeXpd2wvnbxLUj+n0N7eFJOQhLd8Widg/IBexrtciPz3rokLQvuIDk2zUX3cFRrt7apzPichDNKVwLTwSbko4xuuZN5DMlbHeSj75V0C6wFjkg8izltskhydwcvW2HLy7Z5ObSs5R8WkTwmboh2VVKJJK8iOTwnYRzrYL+5F9iG2491EaFPZrYNPQdInhfmH57ucD+Oz+RYxPpr6lloFFWtLTfW6NRyMu/lwKU7rbbrgJC8E14Gf1bcDeAqAK/BW7QpKRY6lgHMFZFlMUuRrkT25KTfw1t9PYANkUkiPmLHlJFQRkT7wtp+KemqFw0Q7BOIEsYtiJUE98eI6CDrRC3TLGKVQBSxFhHsA7ADgPPhrVhvFPcDOE1IPgVgbwdE7lVC9jSYjDQxbGW0TsTuB7CHg3scANBOZVFPT7rKmOQF+hIWDVUH6cTPlbEhTp4VQx08UBiGANjW0T22W23fCtKtrCgiXKwbHVlqZf23FENhBQZDzEteanLBkaav6IZVheoK2Rh5jMhGZORTpslgRE7NnZJ1osGIbGRt5jPbiFXHtCiZNu4MrWMiiPcUDOoAIg8xchpiMKQM4F4A83wLDisBTSiB8KI/pNsT8PP26MtRATASwIEONP46APdoe4wpVi0B8ktEoIWBwtf1ahMzpG0EFmFWff9/C7zQq2sipxmZHgcwO0FoWULkElVQnAlD9wzpg+Bvcf3HmP5CSHHzEoBFZRE5M6ekkD0APApgWJaOEpEVJI/LYJI0RevV6piRvBTAOS02m24UkSu6SSWXc2x7JLKHrf+DJB0ybFfboF8HdaONnBeGdmm0rh08EVUjcuvaLsrEh7CJYaFMCwO6IkF+CwDbBSoUSWBSWNHvK0XktU4jsmmQ1pkszfS9HwdvQUXcZLuWc/xTACcXXSNb4KMzFUMZ4du4NXUSatlvxSQy23RxQEdO9miEM3kWgcjdaioIuivBqNQOnGgnIpuNXHz5SDfYyN3oRxZ0vtdCzLQwEDYJRdHcb0zpiB8LzydZy4AqR2ROIWTrg7CsrmrIFgX/EJGbO9BGFovsdQ62hbfdWJ54CMDNsFGr7S2AUocPaf05X6PP3G+d4U0p2SzYueClywIiNCKj7SNKYu43dL3Xwvyqhq4MiMDcbxaiRhemcUqdFRLPAlgbsX6vVryxAmBrANu34TOYYrB8ZKwHcBKAZyJIUCPyAIAvAbjQAiJG5HYdsisiUkkQWLEoIMxB3c5DoTiQgQ3nRuTUJKDja7NFLxzNnu7u7DexJfGFN0MsIGLuP7Onu3WpEzvgZZACvMQW2csokGoTCE/TnKaRW7k0io68Fu1EtK6ze7tlqVM9ovY7SNWkmRadwbdyQd/sHgBfJLnEt9ojrG7vALwazjZ57fD76mQis85zTepizwfbeLtes5FbQDKL7JmNXIgZuXRBmQFzvxnRDOa16AwSV42nVjKrGejpwsWt7aYlzWuRUfj9AF6BtwcfY7az8hdgoS+pPkzzBs9Z0KEdK122+U9HJ9bPAfCOmL3cSiEEZ8QoFLWHXB8MHWEjlztVK4jIegBLrGM7qq5FV7jfLIHGVoJbPrLB/MitfGNpGtnyMjqFyNJlwQ3aPXT34lOL0hW/KlEhbWQWVHsUYTuFjlvdXWohiU0DGzqeyFJgk0KsiGF3Jg0VrYO6jXDs5hA1C6yRaSmrxZrs0XFpK3S5v1cKkP1W2DROWjDCTJZOIjIjOsI6p/PNEHZTiFoiCF1k74XZyE0kezND1EbU7nvB2CyNXWpRJK+oUT3T3uH3wSIRWSIeztxv3ZM/wSJp5Cj3Gy25B0UNlkgnE1kSdBzNE1Qo04KtupdSi95MCXnAopgY3TyplZT/71jtESSwFFA7s8jFAhOs8mEr0hFKLfBWFN286NYVIowZaVn0VdRFdMV1m9ciqasVRct+i3qw3i4kcj/SbUvcjqTvqzORb4qyKjfRdoqy3ah/fyfJaowNLTFLpJJ4SCRFGD1t1p4AWCIij6Qc5SaQHBo4hxFkOCDLhJPkeAAHw9tI3j8aM0JWEkNQ/2/vDDEbJYTIPUXQyPXIUYG3uXkpIRGqDUSQpA7hw3yeEvMCVPVTu+d7AByWksif0E8z+vVIlTFy2sQ+zktViJJZTOEsrwRIKglmx0mEVi/fgzFuwqi/V32ELrVZnbiw5xzwKQ2m9BgxZkQKJoRJM0PTzdbIUmfxaZLvUaRNajJIxLlM4Q+VEA3PwFAtbep+S5N1yAiySp2koFKr/OrlFq2cljrBknrkYgOFX+Kc89LAym6JIDA7KFghMTY/E8hFIkgfdU7H+5GjhhzGTHAkoFnijk36Pey+6LtOvfsJ00Kd4hZjjIkW5+uXiOMZQuIoJSNF0MhSxzsgERqAMUMVQ86L05ZRmjfKxIn6nXVsxE4gcinjKFfPy1FY00ISOsklgc2WROCsk8tRz0ZmSAdJgXIqJGS0qxeBYx0Tjd2Qj1yNGK6kzuQhjQ3MFG62RmxqSeCvLndYqd40XguJ6b80JGYna+RqHRdNEptOAu0kcbsxhdtNEowUCHENhtnX7RpdlIC7MMpsYsL8CCbsj443LWqRnEFAYVIUSwk0XDs8b9g9DA70SysW/g7pRCK/AOBin9YK26RGQswM1plglGI0ZJy3hAmHVYmYzAVNpaC2f07/vQvAGmwIBdczW9hg2DxqwlkCcH/I8XcCWA4vCsfAiBI2QlbqjJxhIe5qiFvPr9jmwmAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWBAW2wTQHIIgM3gLZVZIyJrWikAksMAbAqgX0RWGCVel0sJwBgAmytP1gBYJiJr25rIJAcDOB/AWAAPisiNCR52GwAXwFv7N1VEHo84biiA9wP4MIA9AIzUc1bAW8d1B4BbRWRlxPnvA3A8gJUALhaRpXXuax8An4FXc/lyEXk1hLwfAXAUgHEAtoW3lm0OgNsB/ERElgXOGQHgy/oSVrHxfigSqNIpAJYC+Ba8RZfTAWwVsZaQdUp51Qo8ni4iL5A8W2Xpr/iTtAzBMyLy+RjZ7Qbg4wAmANgJwDC9j34A/wLwMICbAdwtItWQ80cBmKF9DL2vX4rI5THXPBPAcT65rAJwqogsakgzkXyJHq5LeM4e3IATI47Zn+RDJNf7jq1yYzxF8v0RbZyjx6wjuVOC+zpaj+9VUvt/24Xkg4zHbJLvCpy3FcllTIdFKteRJBczO/bTe5meoY0nImQ2iOTXSa5M2M6vSY4LaWdrkqsCx06v019TAsf3ktwBGVZR96Wsjk4Aa/WtHQi5waMATAOwtbZ5L4DfqBauAngTgMMBvBfA3gBuJXmaiMxEeP3dPiSrH1Hxacaq735GA/g5gL20zdsA/FY15xYA3gPgaP39VpITRORp37P2679/BvB3xK8qFgALVS7DkH2DGvrkMJChnSpJERH65LKJatGPpGjnKAA7kfyQiLwQwqPNkLwy//oMlfw3InKju++UIt6ytwGYCWAUgFcAnAfglpDh6HskPwjgKgA7ALia5BwReRgb18ioJiTyIH2G4JL8SUrSXgDnisjVgd+nkTwVwFQAowF8k+SxIlIJmBI3i8j3Uox2VQBLfPflx/BAHQoCWO2rY1y75nrf81QjFEolwQuzIqQ8wrcjSPwagGf12jsAeEug8vxbAMwgeZiIrEuxe4DzrSPKDiaBpRB7uwzgEgBbAlgHYJKIzIo01EXuILlAbeWtAVxE8ggR6a1TVDDunsRPfJI98CrKA8ADISSu3ct0kvurPXtVoGZDNfBiJcVyvXbZV+G+1t4MHQlqWKrzicW+a/fosfMi2l8F4EP6OwMvcE+gFkevX5mQfDeAM0M06lcAzBCRJb55zoEArgawq+/YgwFMVKWFBuvkVV0XaJGUDUcVGjnY1znXxpHYR6DHSV6hRV3G69D1i4jiKGlesqqvys1o/V6vUMjnRaQvwmRJLXgdxudFaOu1IcPsi8HJZgJT6gURmZ9yXiQAzg3hwbki8oPAM/QCmEXyZAD3AdjE9/NJJG8Im/w1yztWirjg+gy7mgLAMdr2Un2Dk+J6nRkLgBMyDk30aWaoOfFP/b4fyc1iiNfXxA0ZwyoklZvkRt0RwCGBvz0KYEqMbP4M4FYA832foToPiMJAszVyjTDrUhQoLIe42mo7ED0B4MUUmmsByT8oifcmOUJEVjW4ucp/lHsSkSrJe3TYfjuAn5D8mog81YB2r7bZXn09ALYjWQlsKOQvV1ZVBbXCN9HbT33oftwiIvUU2SQlr7/82ZoY2byJ5JE+xcKAmbhzVhmUI96MrUjuHbCvwuqS7RlSn2yMTgwA4Hn/7DghZiuRR6tPe1VMFfskGsr/fab6X8erTXkYyT+p7/gBAHNiAjTiG6nGkXyrz9QI+oRr9/uqvoh5E30zAL9XzVcKqX5aI/Ir6iFarb/vGtL2EwkUTl/KzX8O1w+aVcSwNgE5Xmex1UB9Y/FNJqh2UtCpP0Y9FdBhJy1qwY4RGqiY6yNvKWUl0GpAKy8neZza4R/T+5+gnxUA/kHyQQ2IPBLzgpwN4CztzCq8Spc1L0nFV/3yWHXxNWIWpTUtRiQ4rjcgwzEh9vlyoPOizuWICo/r9e3uC9nHo/bpU7fRljqR8k+qakRanUHbSEQJ1FIKIawP0SaLAUwieaVq5QkA3qxeir3182mSUwGc59PQfjNqdUA263yjRa3a5bCE/t402xjAcbnZISFEHkAHohyiyXp0qP2fBNuw7qGGf8lHulXwHNpDlORpMdjnFF8ZuM9Kwk6u610QkdkAZpO8UE2h8fDCpO9VEp4BoETyTJ/NWCPC5QCujdgLxf/CLW5SPw4AmAXPl8yY0rPzA8GGNSGyH5rDLgjPAPidcqQS8uIeCs+/3/DkNWp2vFJEXkvgvhkZ4kdeCM/5v12EEV8Pu/h8rwsCwqmk1OzlesO0uoxe1s9Mkm8H8APVzCfAiwTeGyDqChGZ18LEreA5a+HlJqQ15RaHkHDHenay+uQH+WRSArA2xv32gIicG9PeFQEip5ZLKaMbZJDvZaASYymAv+jf9olzc0UI6GBsKBS+KGTD9SSuqbE+06Q/pc/3CXgJR8vhZX4dhY1Dp6U23LGpkaLtT4b87dAE510L4Cn9PAlv++ItM+xV0+Paj1zJoB38b9Dd2tbOKWer+6smBIDf+Ib0V/Ul2wzAGxK0U2tjCTy/9OsZbCQP0hTFOMzVkQU64QwSudJme4Q0un/Jo75Rr4Zj4xKzSO4C4KM6r9hFPwJgWSvTg0sZN8P2h23959yu2nQQgK+qCVJPGw8FcKHaaYsA3BhwyS1WL8OxddoZ5QtFPyEiy/XvEwE8rklLu9a5nS18M/p5Kfa0Rgu3RF6XuhFv9AxGT0cD+JEmWAVlOxzAZHj5IX78VPNRGvWLi+vJXrkBjbNRkEBE/ql2z2R4vuZrNattRUxy+1XYEGWaLCKv+A55FcCf4EUMTyZ5k4g8GHE/5wDYXr/fhP9MlqnZ7BeTPEFEorwqX1Abv1cnKcGJaLthOIDLSPb6SFMJ+Px7fL7wySLyD/39MniuVr8rbgKAB0j+WM3EfrVhPwkviOLHywBuyBjgoQMX5IZUPpLPaz7oNQnP2ZPkWs0vnhj4bTDJm7S9PpJ/JDmR5Daa+1omOZbk8STv9eUo36JJ/sFrHaR5qiT5IsmTNUe4R6+1u+a1rtVj7vK3Q7JEcpov5/U+ku/TXOEyyaHaxlTfMbfV2iA5muSCmnxIHkLy3YF/g58DNEUyToa/DuTiLiA5ps45P8yY13xAoL2PkhxooJ11JI8ItLVNSO711XWe58rA8StJbp+FyHO0oSkJz9mLZEXPmRiRrP/9QKL1YpKPk3yY5PxAsv30uMkhyc+S/DfJfv3MI/motuVPep+lq1eC529O8leBBO6XtI2/kFzh++1hkm/wnbslyYV6n32+49brvQzop187uF875M0piTw/AZGnZCTygSFtfiJFUj1VVieGtLMNyaWBY6fkTeRgPvJ8eFG5pOuy+nWyMCTMRtP1XWeRvFMjYQfq7Ha075r/Uht4qojcUsemm0Lyr/Aytg7Ridi2eu1+AC8B+BmA79Zs48D5K0l+BMBpAE4E8EZ1N+3oc2M9rW1cEzCFqj4vSi0hqRKxHVowRzjNJK6acoN0aWCSGBYoup7k0/CWrr0P0ZHCNeqO/KqIPJnQVKjknY8sgZS+rdQOXJMkjZDkIHj5wwJgSb2FiSR3Vju1dp2F8FZazE2bk0FydwC764uxGl4S+F9r+bMJJ5e76f1sqqR7BcDfwvIj1NOxbYQriRFb11YBLBKRgZj72BfANr6J81oAD9U5Z3d4aw0Zs9l7HEkeissB0fbfDWAfla9ocGo2gFlxiVa6uHi89m/tRXtRRP5e53o7+1If+gDcnyAL8XX8Pw/QlNuU9hBtAAAAAElFTkSuQmCC';
+function wrapT(c,txt,x,y,w,lh){const words=String(txt).split(' ');let line='';for(const wd of words){const tt=line?line+' '+wd:wd;if(c.measureText(tt).width>w&&line){c.fillText(line,x,y);y+=lh;line=wd;}else line=tt;}if(line){c.fillText(line,x,y);y+=lh;}return y;}
+async function makeSheet(){
+  try{await document.fonts.ready;}catch(_){}
+  const W=1080,P=64,F="'Be Vietnam Pro',Arial,sans-serif";
+  const cv=document.createElement('canvas');cv.width=W;cv.height=3200;const c=cv.getContext('2d');
+  const r=totals(),p=PKGS.find(x=>x.id===sel),proj=$('proj').value.trim();
+  const NAVY='#17253b',GOLD='#b48a4f',CREAM='#f6f1e7',INK='#1d1f24',MUT='#6c6a66',LINE='#e3dacb';
+  c.fillStyle='#fffdf8';c.fillRect(0,0,W,3200);
+  c.fillStyle=NAVY;c.fillRect(0,0,W,230);
+  if(LOGO.complete&&LOGO.naturalWidth){const h=96,w=LOGO.naturalWidth*h/LOGO.naturalHeight;c.drawImage(LOGO,P,67,w,h);}
+  c.fillStyle='#cdb38a';c.font=`500 22px ${F}`;c.fillText('HOUSETECH · HT- SALE',P+130,92);
+  c.fillStyle='#fff';c.font=`300 44px ${F}`;c.fillText(T('BẢNG GIÁ DỰ TOÁN SƠ BỘ','PRELIMINARY PRICE SHEET'),P+130,148);
+  c.fillStyle='#c7cdd8';c.font=`400 22px ${F}`;const d=new Date();c.fillText(T('Ngày ','Date ')+d.toLocaleDateString(EN()?'en-GB':'vi-VN')+(proj?'  ·  '+proj:''),P+130,190);
+  let y=290;
+  c.fillStyle=GOLD;c.font=`600 22px ${F}`;c.fillText(T('GÓI ','PACKAGE ')+sel,P,y);y+=44;
+  c.fillStyle=NAVY;c.font=`600 34px ${F}`;y=wrapT(c,t(p.name),P,y,W-2*P,44);y+=8;
+  const rows=[[T('Diện tích tính giá','Priced area'),r.a.toLocaleString(EN()?'en-US':'vi-VN')+' m²'],[T('Đơn giá / m²','Rate / m²'),cur(rates[sel])],[T('Giá trị trước thuế','Value before tax'),cur(r.pre)]];
+  if(vat)rows.push([T('Thuế GTGT ','VAT ')+vat+'%',cur(r.v)]);
+  c.font=`400 26px ${F}`;
+  for(const [k,v] of rows){c.fillStyle=MUT;c.fillText(k,P,y+20);c.fillStyle=INK;c.textAlign='right';c.fillText(v,W-P,y+20);c.textAlign='left';y+=52;c.strokeStyle=LINE;c.lineWidth=1;c.beginPath();c.moveTo(P,y-14);c.lineTo(W-P,y-14);c.stroke();}
+  y+=14;c.fillStyle=NAVY;c.fillRect(P,y,W-2*P,120);
+  c.fillStyle='#cdb38a';c.font=`500 22px ${F}`;c.fillText(vat?T('TỔNG GỒM THUẾ','TOTAL INCL. VAT'):T('TỔNG TRƯỚC THUẾ','TOTAL BEFORE TAX'),P+32,y+48);
+  c.fillStyle='#fff';c.font=`600 46px ${F}`;c.textAlign='right';c.fillText(cur(r.tot),W-P-32,y+80);c.textAlign='left';y+=170;
+  c.fillStyle=GOLD;c.font=`600 22px ${F}`;c.fillText(T('BAO GỒM','INCLUDES'),P,y);y+=40;
+  c.font=`400 25px ${F}`;c.fillStyle=INK;
+  for(const x of p.inc){const it=ITEMS.find(i=>i[0]===x);y=wrapT(c,'•  '+x+'. '+t([it[1],it[2]]),P,y,W-2*P,36);}
+  const ex=EXTRAS.filter(e=>extras.has(e[0]));
+  if(ex.length){y+=20;c.fillStyle=GOLD;c.font=`600 22px ${F}`;c.fillText(T('HẠNG MỤC BÁO GIÁ RIÊNG','ITEMS QUOTED SEPARATELY'),P,y);y+=40;c.font=`400 25px ${F}`;c.fillStyle=INK;for(const e of ex)y=wrapT(c,'•  '+e[0]+'. '+T(e[1],e[2]),P,y,W-2*P,36);}
+  y+=20;c.fillStyle=GOLD;c.font=`600 22px ${F}`;c.fillText(T('TIẾN ĐỘ THANH TOÁN','PAYMENT SCHEDULE'),P,y);y+=24;
+  c.font=`400 24px ${F}`;
+  PAY.forEach(([vi,en,pc],i)=>{c.fillStyle=i%2?'#fffdf8':CREAM;c.fillRect(P,y,W-2*P,58);c.fillStyle=INK;c.fillText((i+1)+'.  '+T(vi,en)+' · '+pc+'%',P+18,y+37);c.textAlign='right';c.fillText(fmt(r.tot*pc/100),W-P-18,y+37);c.textAlign='left';y+=58;});
+  y+=36;c.fillStyle=MUT;c.font=`400 21px ${F}`;
+  y=wrapT(c,T('Dự toán sơ bộ theo m², hiệu lực 15 ngày. Giá chính thức theo bảng khối lượng và hồ sơ thiết kế được duyệt.','Preliminary per-m² estimate, valid 15 days. Final price follows the bill of quantities and approved design.'),P,y,W-2*P,30);
+  y+=24;c.fillStyle=NAVY;c.fillRect(0,y,W,96);c.fillStyle='#fff';c.font=`500 26px ${F}`;c.fillText(T('HouseTech · Hotline / Zalo 0918 107 001','HouseTech · Hotline / Zalo 0918 107 001'),P,y+58);
+  y+=96;
+  const out=document.createElement('canvas');out.width=W;out.height=y;out.getContext('2d').drawImage(cv,0,0);
+  return out;
+}
+$('saveImg').addEventListener('click',async()=>{
+  const cv=await makeSheet();const url=cv.toDataURL('image/png');
+  $('imgPrev').src=url;$('imgOut').hidden=false;
+  $('imgHint').textContent=T('Trên điện thoại: nhấn giữ ảnh để lưu hoặc chia sẻ.','On a phone: press and hold the image to save or share it.');
+  if(DL){cv.toBlob(async b=>{try{await DL.save({filename:'HouseTech_bang_gia_'+sel+'.png',data:b});$('toast').textContent=T('Đã lưu ảnh bảng giá.','Price sheet image saved.');}catch(e){if(e&&e.code!=='declined')$('toast').textContent=T('Không lưu tự động được; hãy nhấn giữ ảnh bên dưới để lưu.','Could not save automatically; press and hold the image below to save it.');}},'image/png');}
+});
+window.HT_ON.push(function(){renderExtras();renderRates();render();});
+renderExtras();renderRates();render();renderReq();
+</script>
+<script>
+(function(){
+var btn=document.getElementById('htMusic');if(!btn)return;
+var ctx=null,master=null,bus=null,on=false,timer=null,bar=0,duck=1,VOL=0.34,next=0,noise=null;
+var BPM=138,B=60/BPM,SW=B*2/3;
+var PR=[{r:38,v:[53,57,60,64]},{r:43,v:[53,57,59,64]},{r:36,v:[52,55,59,62]},{r:45,v:[55,58,61,65]},
+        {r:41,v:[52,57,60,64]},{r:40,v:[50,55,59,62]},{r:38,v:[53,57,60,64]},{r:43,v:[53,56,59,63]}];
+var SC=[62,64,65,67,69,72,74,76,77,79];
+function f(n){return 440*Math.pow(2,(n-69)/12)}
+function init(){ctx=new (window.AudioContext||window.webkitAudioContext)();master=ctx.createGain();master.gain.value=0;
+ var comp=ctx.createDynamicsCompressor();comp.threshold.value=-18;comp.ratio.value=3;
+ bus=ctx.createGain();bus.gain.value=1;var c=ctx.createConvolver(),len=ctx.sampleRate*1.6,b=ctx.createBuffer(2,len,ctx.sampleRate);
+ for(var ch=0;ch<2;ch++){var d=b.getChannelData(ch);for(var i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,3);}c.buffer=b;
+ var wet=ctx.createGain();wet.gain.value=0.22;bus.connect(comp);bus.connect(c);c.connect(wet);wet.connect(comp);comp.connect(master);master.connect(ctx.destination);
+ var nl=ctx.sampleRate*0.5;noise=ctx.createBuffer(1,nl,ctx.sampleRate);var nd=noise.getChannelData(0);for(var k=0;k<nl;k++)nd[k]=Math.random()*2-1;}
+function tone(type,n,t,d,v,att){var o=ctx.createOscillator(),g=ctx.createGain();o.type=type;o.frequency.value=f(n);
+ g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+(att||0.008));g.gain.exponentialRampToValueAtTime(0.0008,t+d);o.connect(g);g.connect(bus);o.start(t);o.stop(t+d+0.05);}
+function keys(n,t,d,v){tone('sine',n,t,d,v,0.006);tone('sine',n+12,t,d*0.5,v*0.25,0.004);tone('triangle',n,t,d*0.3,v*0.2,0.003);}
+function cym(t,v,dur,hp){var s=ctx.createBufferSource();s.buffer=noise;var fl=ctx.createBiquadFilter();fl.type='highpass';fl.frequency.value=hp||7000;
+ var g=ctx.createGain();g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(0.0005,t+dur);s.connect(fl);fl.connect(g);g.connect(bus);s.start(t);s.stop(t+dur+0.02);}
+function kick(t,v){var o=ctx.createOscillator(),g=ctx.createGain();o.frequency.setValueAtTime(110,t);o.frequency.exponentialRampToValueAtTime(45,t+0.12);
+ g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(0.001,t+0.18);o.connect(g);g.connect(bus);o.start(t);o.stop(t+0.2);}
+function playBar(t){var c=PR[bar%PR.length],nx=PR[(bar+1)%PR.length];
+ var walk=[c.r,c.r+(Math.random()<.5?4:3),c.r+7,nx.r+(Math.random()<.5?1:-1)];
+ walk.forEach(function(n,i){tone('triangle',n,t+i*B,B*0.9,0.22,0.01);tone('sine',n,t+i*B,B*0.8,0.16,0.01);});
+ for(var i=0;i<4;i++){cym(t+i*B,0.07,0.32);if(i==1||i==3){cym(t+i*B+SW,0.05,0.18);cym(t+i*B,0.035,0.05,4000);}}
+ kick(t,0.35);if(Math.random()<.5)kick(t+2*B+SW,0.2);
+ var hits=[[1,SW,0.18],[3,0,0.22],[2,SW,0.12]];
+ hits.forEach(function(h){if(Math.random()<.85)c.v.forEach(function(n){keys(n,t+h[0]*B+h[1],0.45,0.035*(h[2]/0.18));});});
+ for(var b8=0;b8<8;b8++){if(Math.random()<.42){var tt=t+Math.floor(b8/2)*B+(b8%2?SW:0);keys(SC[Math.floor(Math.random()*SC.length)]+(bar%4==3?2:0),tt,0.35,0.07);}}
+ bar++;}
+function loop(){while(next<ctx.currentTime+0.6){playBar(next);next+=4*B;}}
+function setVol(){if(!ctx)return;var v=on?VOL*duck:0;master.gain.cancelScheduledValues(ctx.currentTime);master.gain.setTargetAtTime(v,ctx.currentTime,0.25);}
+function label(){var vi=window.HT_LANG!=='en';btn.setAttribute('aria-pressed',on);btn.title=on?(vi?'Tắt nhạc nền':'Music off'):(vi?'Bật nhạc nền':'Music on');
+ btn.querySelector('span').textContent=on?(vi?'Nhạc: bật':'Music: on'):(vi?'Nhạc nền':'Music');btn.classList.toggle('mon',on);}
+btn.addEventListener('click',function(){try{if(!ctx)init();if(ctx.state==='suspended')ctx.resume();on=!on;
+ if(on){if(!timer){next=ctx.currentTime+0.1;loop();timer=setInterval(loop,200);}}else{setTimeout(function(){if(!on&&timer){clearInterval(timer);timer=null;}},800);}
+ setVol();}catch(e){btn.hidden=true;}label();});
+document.addEventListener('visibilitychange',function(){if(!ctx)return;if(document.hidden)ctx.suspend();else if(on){ctx.resume();next=Math.max(next,ctx.currentTime+0.1);}});
+window.HT_MUSIC_DUCK=function(x){duck=x?0.2:1;setVol();};
+if(window.HT_ON)window.HT_ON.push(label);label();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:title" content="HouseTech · Quy trình bán hàng & các gói">
+<meta property="og:description" content="HouseTech · Tổng thầu thiết kế, xây dựng &amp; nội thất · Caraworld Cam Ranh">
+<meta property="og:image" content="https://dangdilam.github.io/HT--sale-2/HT_anh_xem_truoc_link.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dangdilam.github.io/HT--sale-2/quytrinh/">
+<title>HouseTech · Quy trình bán hàng & các gói</title><link rel="icon" type="image/png" href="../ht_logo_web.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>.htnav{position:sticky;top:0;z-index:50;background:#0f1a2b;color:#fff;font-family:'Be Vietnam Pro',system-ui,sans-serif}
+.htnav .in{max-width:1280px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;gap:10px;min-height:44px}
+.htnav a.hb,.htnav button{font:inherit;font-size:13px;color:#fff;background:transparent;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;line-height:1}
+.htnav a.hb:hover,.htnav button:hover{border-color:#cdb38a;color:#e8d6b6}
+.htnav a.hb:focus-visible,.htnav button:focus-visible{outline:2px solid #cdb38a;outline-offset:2px}
+.htnav .sp{flex:1}.htnav button.mon{border-color:#cdb38a;color:#e8d6b6}@media(max-width:520px){.htnav #htMusic span{display:none}.htnav .in{gap:6px;padding:8px 12px}}@media(max-width:430px){.htnav .brand{display:none}}
+.htnav .brand{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#cdb38a}
+.htnav .lang{display:inline-flex;border:1px solid rgba(255,255,255,.25);border-radius:999px;overflow:hidden}
+.htnav .lang button{border:0;border-radius:0;padding:6px 11px}
+.htnav .lang button.on{background:#b48a4f;color:#0f1a2b;font-weight:600}
+.htnav svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.htdrawer{position:fixed;inset:0;z-index:60;display:none}
+.htdrawer.open{display:block}
+.htdrawer .bg{position:absolute;inset:0;background:rgba(15,26,43,.45)}
+.htdrawer .pn{position:absolute;top:0;right:0;height:100%;width:min(360px,88vw);background:#fffdf8;box-shadow:-8px 0 30px rgba(0,0,0,.18);padding:20px;display:flex;flex-direction:column;gap:6px;overflow:auto;font-family:'Be Vietnam Pro',system-ui,sans-serif}
+.htdrawer .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.htdrawer .hd b{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#17253b}
+.htdrawer .hd button{font:inherit;border:1px solid #e3dacb;background:#fff;border-radius:999px;padding:5px 12px;cursor:pointer;color:#17253b}
+.htdrawer a{display:block;padding:11px 12px;border-radius:6px;color:#17253b;text-decoration:none;font-size:14.5px;border:1px solid transparent}
+.htdrawer a:hover{background:#f6f1e7;border-color:#e3dacb}
+.htdrawer a.cur{background:#17253b;color:#fff}
+.htdrawer a.home{font-weight:600;border-color:#e3dacb;margin-bottom:6px}
+.htdrawer .ft{margin-top:auto;font-size:12px;color:#6c6a66;padding-top:12px}
+:root{--navy:#17253b;--cream:#f6f1e7;--gold:#b48a4f;--terra:#be6a52;--line:#e3dacb}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--cream);color:#1d2533;font-family:'Be Vietnam Pro',system-ui,sans-serif;-webkit-text-size-adjust:100%}
+.hero{background:var(--navy);color:#fff;padding:34px 20px 30px}
+.hero .in,.wrap{max-width:980px;margin:0 auto}
+.eyebrow{font-family:Consolas,ui-monospace,monospace;color:#d98b72;letter-spacing:.18em;text-transform:uppercase;font-size:12px}
+.hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(26px,4.4vw,40px);margin:10px 0 8px;line-height:1.15}
+.hero h1{color:#fff!important;border:0!important}
+.hero p{color:#cfd6e2;margin:0;max-width:720px;line-height:1.55}
+.wrap{padding:24px 16px 60px}
+.paper{background:#fff;border:1px solid var(--line);border-radius:10px;padding:clamp(18px,4vw,44px);box-shadow:0 8px 30px rgba(23,37,59,.06)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:var(--gold);color:#fff;text-decoration:none;font-weight:600;font-size:14px}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.4)}
+.foot{text-align:center;color:#6c6a66;font-size:12.5px;margin-top:26px}
+@media print{.htnav,.htdrawer,.hero .btns,#htMusic{display:none!important}body{background:#fff}.paper{border:0;box-shadow:none;padding:0}}
+.st{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.st li{background:#fff;border:1px solid var(--line);border-top:4px solid var(--navy);border-radius:10px;padding:16px;display:flex;gap:12px}
+.st li.g{border-top-color:#3f8f5a}.st .n{flex:0 0 34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.st li.g .n{background:#3f8f5a}.st b{color:var(--navy);font-size:16px}.st p{margin:4px 0 0;color:#4b4f57;font-size:14px;line-height:1.5}
+.lk{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}.lk a{font-size:12.5px;color:var(--terra);text-decoration:none;border:1px solid #ecd3c9;border-radius:999px;padding:3px 10px}
+h2{color:var(--navy);font-size:20px;margin:34px 0 12px;font-family:Georgia,serif;font-weight:400}
+.pk{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(--line);font-size:15px}
+.pk th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px}.pk td{padding:10px 12px;border-top:1px solid var(--line)}.pk td:nth-child(2){font-variant-numeric:tabular-nums;white-space:nowrap}.nt{color:#6c6a66;font-size:13.5px}</style></head><body>
+<nav class="htnav" aria-label="HT- SALE"><div class="in"><a class="hb" id="htHome" href="../"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span data-en="HT- SALE home">Trang chính</span></a><span class="brand">HouseTech · HT- SALE</span><span class="sp"></span><button id="htMusic" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span>Nhạc nền</span></button>
+<button id="htMenuBtn" aria-haspopup="dialog" aria-controls="htDrawer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span data-en="Menu">Menu</span></button>
+<div class="lang" role="group" aria-label="Ngôn ngữ / Language"><button data-l="vi">VI</button><button data-l="en">EN</button></div>
+</div></nav>
+<div class="htdrawer" id="htDrawer" role="dialog" aria-modal="true" aria-label="Menu"><div class="bg" data-close></div><div class="pn">
+<div class="hd"><b data-en="All pages">Tất cả trang</b><button data-close data-en="Close">Đóng</button></div>
+<div id="htLinks"></div><div class="ft" data-en="Pages marked ↗ open in the slide, doc or whiteboard editor.">Trang có dấu ↗ mở trong trình xem slide, tài liệu hoặc whiteboard.</div></div></div>
+<header class="hero"><div class="in"><div class="eyebrow" data-en="HT- SALE · 07">HT- SALE · 07</div><h1 data-en="Sales process & packages">Quy trình bán hàng & các gói</h1><p data-en="One point of contact from quotation to home care.">Một đầu mối từ báo giá đến chăm sóc nhà.</p></div></header>
+<main class="wrap"><ol class="st"><li class=""><span class="n">1</span><div><b data-en="Intake & survey">Tiếp nhận & khảo sát</b><p data-en="Needs, site condition, priced area">Nhu cầu, hiện trạng, diện tích tính giá</p></div></li><li class=""><span class="n">2</span><div><b data-en="Choose package A1–A4">Chọn gói A1–A4</b><p data-en="Area × rate/m²; other items quoted separately">Diện tích × đơn giá/m², hạng mục khác báo riêng</p><div class=lk><a href="../goi/" data-en="Package picker →">Chọn gói & tự ra giá →</a></div></div></li><li class=""><span class="n">3</span><div><b data-en="Concept design">Thiết kế ý tưởng</b><p data-en="Plans, moodboard, renders, materials">Mặt bằng, moodboard, phối cảnh, vật liệu</p><div class=lk><a href="../thietke/" data-en="Sample design →">Thiết kế mẫu →</a><a href="../vatlieu/" data-en="Sample materials →">Vật liệu mẫu →</a></div></div></li><li class=""><span class="n">4</span><div><b data-en="Estimate & contract">Dự toán & hợp đồng</b><p data-en="Quantity, materials and schedule appendices">Phụ lục khối lượng, vật tư, tiến độ</p><div class=lk><a href="../dutoan/" data-en="Sample estimate →">Dự toán mẫu →</a><a href="../hopdong/" data-en="Sample contract →">Hợp đồng mẫu →</a></div></div></li><li class="g"><span class="n">5</span><div><b data-en="5 Greens check">Kiểm soát 5 Xanh</b><p data-en="Legal · Design · Materials · Site · Crew">Pháp lý · Thiết kế · Vật tư · Mặt bằng · Nhân sự</p></div></li><li class=""><span class="n">6</span><div><b data-en="Construction">Thi công</b><p data-en="Sample A1: 70 working days, weekly reports">Gói A1 mẫu: 70 ngày làm việc, báo cáo tuần</p><div class=lk><a href="../tiendo/" data-en="Sample schedule →">Tiến độ mẫu →</a></div></div></li><li class=""><span class="n">7</span><div><b data-en="Staged acceptance">Nghiệm thu theo đợt</b><p data-en="Payments 40 · 25 · 20 · 10 · 5%">Thanh toán 40 · 25 · 20 · 10 · 5%</p></div></li><li class=""><span class="n">8</span><div><b data-en="Handover & warranty">Bàn giao & bảo hành</b><p data-en="12 months; lift-shaft structure 24 months">12 tháng; kết cấu ô thang máy 24 tháng</p></div></li><li class=""><span class="n">9</span><div><b data-en="Care & operation">Chăm sóc & vận hành</b><p data-en="HouseTech Care after handover">HouseTech Care sau bàn giao</p><div class=lk><a href="../care/" data-en="HouseTech Care →">HouseTech Care →</a></div></div></li></ol><h2 data-en="Investment packages (before tax)">Các gói đầu tư (giá trước thuế)</h2><table class="pk"><thead><tr><th data-en="Package">Gói</th><th data-en="Rate/m² (VND)">Đơn giá/m² (VNĐ)</th><th data-en="Includes">Gồm hạng mục</th></tr></thead><tbody><tr><td><b>A1</b></td><td>6.200.000</td><td data-en="I, II, III, IV · to service stubs">I, II, III, IV · đến đầu chờ</td></tr><tr><td><b>A2</b></td><td>5.000.000</td><td data-en="I, III · to service stubs">I, III · đến đầu chờ</td></tr><tr><td><b>A3</b></td><td>9.000.000</td><td data-en="I, III–VII · full interior">I, III–VII · trọn gói nội thất</td></tr><tr><td><b>A4</b></td><td>10.050.000</td><td data-en="I–VII · complete turnkey">I–VII · trọn gói đầy đủ</td></tr></tbody></table><p class="nt" data-en="Payment in 5 stages: 40% · 25% · 20% · 10% · 5%.">Thanh toán 5 đợt: 40% · 25% · 20% · 10% · 5%.</p></main>
+<div class="foot">© HouseTech · Caraworld Cam Ranh · 0918 107 001</div>
+<script>
+(function(){
+var P=[{"id": "home", "url": "../", "vi": "Trang chính HT- SALE", "en": "HT- SALE home", "web": true}, {"id": "goi", "url": "../goi/", "vi": "01 · Chọn gói đầu tư & tự ra giá", "en": "01 · Package picker & pricing", "web": true}, {"id": "slides", "url": "../thietke/", "vi": "02 · Thiết kế mẫu (slide)", "en": "02 · Sample design (slides)", "web": true}, {"id": "vatlieu", "url": "../vatlieu/", "vi": "03 · Vật liệu & thiết bị mẫu", "en": "03 · Sample materials & fittings", "web": true}, {"id": "dutoan", "url": "../dutoan/", "vi": "04 · Dự toán kinh phí đầu tư", "en": "04 · Investment cost estimate", "web": true}, {"id": "hopdong", "url": "../hopdong/", "vi": "05 · Hợp đồng thi công mẫu", "en": "05 · Sample construction contract", "web": true}, {"id": "tiendo", "url": "../tiendo/", "vi": "06 · Tiến độ thi công mẫu", "en": "06 · Sample construction schedule", "web": true}, {"id": "wb", "url": "../quytrinh/", "vi": "07 · Quy trình bán hàng & các gói", "en": "07 · Sales process & packages", "web": true}, {"id": "care", "url": "../care/", "vi": "08 · HouseTech Care", "en": "08 · HouseTech Care", "web": true}, {"id": "lienhe", "url": "../lienhe/", "vi": "09 · Liên hệ", "en": "09 · Contact", "web": true}], CUR="wb";
+var L='vi'; try{ if(location.hash==='#en') L='en'; else { var s=localStorage.getItem('ht_lang'); if(s==='en'&&!location.hash) L='en'; } }catch(e){}
+window.HT_LANG=L; window.HT_ON=[];
+window.T=function(vi,en){return window.HT_LANG==='en'?en:vi;};
+var orig=new WeakMap();
+function apply(){
+  document.documentElement.lang=window.HT_LANG;
+  document.querySelectorAll('[data-en]').forEach(function(el){
+    if(!orig.has(el)) orig.set(el, el.tagName==='INPUT'?el.placeholder:el.innerHTML);
+    var v=window.HT_LANG==='en'?el.getAttribute('data-en'):orig.get(el);
+    if(el.tagName==='INPUT') el.placeholder=v; else el.innerHTML=v;
+  });
+  document.querySelectorAll('.htnav .lang button').forEach(function(b){b.classList.toggle('on',b.dataset.l===window.HT_LANG);b.setAttribute('aria-pressed',b.dataset.l===window.HT_LANG);});
+  var box=document.getElementById('htLinks');
+  box.innerHTML=P.map(function(p,i){var u=p.url+(p.web&&window.HT_LANG==='en'?'#en':'');return '<a href="'+u+'" class="'+(i===0?'home ':'')+(p.id===CUR?'cur':'')+'"'+(p.id===CUR?' aria-current="page"':'')+'>'+(window.HT_LANG==='en'?p.en:p.vi)+(p.web?'':' ↗')+'</a>';}).join('');
+  var h=document.getElementById('htHome'); if(h) h.href=P[0].url+(window.HT_LANG==='en'?'#en':'');
+  document.querySelectorAll('a[data-web]').forEach(function(a){var b=a.getAttribute('href').split('#')[0];a.setAttribute('href',b+(window.HT_LANG==='en'?'#en':''));});
+  window.HT_ON.forEach(function(f){try{f();}catch(e){}});
+}
+window.HT_apply=apply;
+document.querySelectorAll('.htnav .lang button').forEach(function(b){b.addEventListener('click',function(){window.HT_LANG=b.dataset.l;try{localStorage.setItem('ht_lang',window.HT_LANG);history.replaceState(null,'',window.HT_LANG==='en'?'#en':location.pathname+location.search);}catch(e){}apply();});});
+var d=document.getElementById('htDrawer'), mb=document.getElementById('htMenuBtn');
+function close(){d.classList.remove('open');mb.focus();}
+mb.addEventListener('click',function(){d.classList.add('open');var a=d.querySelector('a');if(a)a.focus();});
+d.querySelectorAll('[data-close]').forEach(function(x){x.addEventListener('click',close);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.classList.contains('open'))close();});
+window.addEventListener('hashchange',function(){var n=location.hash==='#en'?'en':'vi';if(n!==window.HT_LANG){window.HT_LANG=n;apply();}});
+document.addEventListener('DOMContentLoaded',apply); if(document.readyState!=='loading') apply();
+})();
+</script>
+<script>
+(function(){
+var btn=document.getElementById('htMusic');if(!btn)return;
+var ctx=null,master=null,bus=null,on=false,timer=null,bar=0,duck=1,VOL=0.34,next=0,noise=null;
+var BPM=138,B=60/BPM,SW=B*2/3;
+var PR=[{r:38,v:[53,57,60,64]},{r:43,v:[53,57,59,64]},{r:36,v:[52,55,59,62]},{r:45,v:[55,58,61,65]},
+        {r:41,v:[52,57,60,64]},{r:40,v:[50,55,59,62]},{r:38,v:[53,57,60,64]},{r:43,v:[53,56,59,63]}];
+var SC=[62,64,65,67,69,72,74,76,77,79];
+function f(n){return 440*Math.pow(2,(n-69)/12)}
+function init(){ctx=new (window.AudioContext||window.webkitAudioContext)();master=ctx.createGain();master.gain.value=0;
+ var comp=ctx.createDynamicsCompressor();comp.threshold.value=-18;comp.ratio.value=3;
+ bus=ctx.createGain();bus.gain.value=1;var c=ctx.createConvolver(),len=ctx.sampleRate*1.6,b=ctx.createBuffer(2,len,ctx.sampleRate);
+ for(var ch=0;ch<2;ch++){var d=b.getChannelData(ch);for(var i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,3);}c.buffer=b;
+ var wet=ctx.createGain();wet.gain.value=0.22;bus.connect(comp);bus.connect(c);c.connect(wet);wet.connect(comp);comp.connect(master);master.connect(ctx.destination);
+ var nl=ctx.sampleRate*0.5;noise=ctx.createBuffer(1,nl,ctx.sampleRate);var nd=noise.getChannelData(0);for(var k=0;k<nl;k++)nd[k]=Math.random()*2-1;}
+function tone(type,n,t,d,v,att){var o=ctx.createOscillator(),g=ctx.createGain();o.type=type;o.frequency.value=f(n);
+ g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+(att||0.008));g.gain.exponentialRampToValueAtTime(0.0008,t+d);o.connect(g);g.connect(bus);o.start(t);o.stop(t+d+0.05);}
+function keys(n,t,d,v){tone('sine',n,t,d,v,0.006);tone('sine',n+12,t,d*0.5,v*0.25,0.004);tone('triangle',n,t,d*0.3,v*0.2,0.003);}
+function cym(t,v,dur,hp){var s=ctx.createBufferSource();s.buffer=noise;var fl=ctx.createBiquadFilter();fl.type='highpass';fl.frequency.value=hp||7000;
+ var g=ctx.createGain();g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(0.0005,t+dur);s.connect(fl);fl.connect(g);g.connect(bus);s.start(t);s.stop(t+dur+0.02);}
+function kick(t,v){var o=ctx.createOscillator(),g=ctx.createGain();o.frequency.setValueAtTime(110,t);o.frequency.exponentialRampToValueAtTime(45,t+0.12);
+ g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(0.001,t+0.18);o.connect(g);g.connect(bus);o.start(t);o.stop(t+0.2);}
+function playBar(t){var c=PR[bar%PR.length],nx=PR[(bar+1)%PR.length];
+ var walk=[c.r,c.r+(Math.random()<.5?4:3),c.r+7,nx.r+(Math.random()<.5?1:-1)];
+ walk.forEach(function(n,i){tone('triangle',n,t+i*B,B*0.9,0.22,0.01);tone('sine',n,t+i*B,B*0.8,0.16,0.01);});
+ for(var i=0;i<4;i++){cym(t+i*B,0.07,0.32);if(i==1||i==3){cym(t+i*B+SW,0.05,0.18);cym(t+i*B,0.035,0.05,4000);}}
+ kick(t,0.35);if(Math.random()<.5)kick(t+2*B+SW,0.2);
+ var hits=[[1,SW,0.18],[3,0,0.22],[2,SW,0.12]];
+ hits.forEach(function(h){if(Math.random()<.85)c.v.forEach(function(n){keys(n,t+h[0]*B+h[1],0.45,0.035*(h[2]/0.18));});});
+ for(var b8=0;b8<8;b8++){if(Math.random()<.42){var tt=t+Math.floor(b8/2)*B+(b8%2?SW:0);keys(SC[Math.floor(Math.random()*SC.length)]+(bar%4==3?2:0),tt,0.35,0.07);}}
+ bar++;}
+function loop(){while(next<ctx.currentTime+0.6){playBar(next);next+=4*B;}}
+function setVol(){if(!ctx)return;var v=on?VOL*duck:0;master.gain.cancelScheduledValues(ctx.currentTime);master.gain.setTargetAtTime(v,ctx.currentTime,0.25);}
+function label(){var vi=window.HT_LANG!=='en';btn.setAttribute('aria-pressed',on);btn.title=on?(vi?'Tắt nhạc nền':'Music off'):(vi?'Bật nhạc nền':'Music on');
+ btn.querySelector('span').textContent=on?(vi?'Nhạc: bật':'Music: on'):(vi?'Nhạc nền':'Music');btn.classList.toggle('mon',on);}
+btn.addEventListener('click',function(){try{if(!ctx)init();if(ctx.state==='suspended')ctx.resume();on=!on;
+ if(on){if(!timer){next=ctx.currentTime+0.1;loop();timer=setInterval(loop,200);}}else{setTimeout(function(){if(!on&&timer){clearInterval(timer);timer=null;}},800);}
+ setVol();}catch(e){btn.hidden=true;}label();});
+document.addEventListener('visibilitychange',function(){if(!ctx)return;if(document.hidden)ctx.suspend();else if(on){ctx.resume();next=Math.max(next,ctx.currentTime+0.1);}});
+window.HT_MUSIC_DUCK=function(x){duck=x?0.2:1;setVol();};
+if(window.HT_ON)window.HT_ON.push(label);label();
+})();
+</script>
+</body></html>
